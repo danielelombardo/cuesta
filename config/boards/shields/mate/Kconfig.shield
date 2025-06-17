@@ -1,8 +1,0 @@
-config SHIELD_MATE_LEFT
-	def_bool $(shields_list_contains,mate_left)
-
-config SHIELD_MATE_RIGHT
-	def_bool $(shields_list_contains,mate_right)
-
-config SHIELD_MATE_DONGLE
-	def_bool $(shields_list_contains,mate_dongle)

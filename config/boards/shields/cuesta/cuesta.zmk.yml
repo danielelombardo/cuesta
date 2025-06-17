@@ -1,0 +1,10 @@
+file_format: "1"
+id: cuesta
+name: _cuesta
+type: shield
+features:
+  - keys
+siblings:
+  - cuesta_left
+  - cuesta_right
+  - cuesta_dongle
