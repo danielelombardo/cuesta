@@ -13,12 +13,5 @@
 #
 # settings_reset: use when left and right side are switched on different boards
 ---
-include:
-  - board: seeeduino_xiao_ble
-    shield: cuesta_dongle
-  - board: seeeduino_xiao_ble
-    shield: cuesta_left
-  - board: seeeduino_xiao_ble
-    shield: cuesta_right
-  - board: seeeduino_xiao_ble
-    shield: settings_reset
+board: [ "seeeduino_xiao_ble" ]
+shield: [ "cuesta_dongle", "cuesta_left", "cuesta_right", "settings_reset" ]
