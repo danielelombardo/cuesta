@@ -43,8 +43,8 @@
         dot_s:   dot_spc  { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <5>; tap-ms = <15>;
             bindings = <&macro_tap &kp DOT &kp SPACE &sk LSHFT>; };
 
-        rst_all: rst_all  { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <5>; tap-ms = <15>;
-            bindings = <&macro_release &kp LSHFT &kp LCTRL &kp LALT &kp LGUI &kp RSHFT &kp RCTRL &kp RALT &kp RGUI>, <&macro_tap &to 0>; };
+        rst_m:   rst_mods { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <5>; tap-ms = <15>;
+            bindings = <&macro_release &kp LSHFT &kp LCTRL &kp LALT &kp LGUI &kp RSHFT &kp RCTRL &kp RALT &kp RGUI>; };
         tog_lay: tog_lay  { compatible = "zmk,behavior-macro-one-param"; #binding-cells = <1>; 
             bindings = <&macro_pause_for_release>, <&macro_param_1to1>, <&macro_tap &tog MACRO_PLACEHOLDER>; };
     };
@@ -64,7 +64,7 @@
             bindings = <
                 &kp ESC   &kp COMMA &kp DOT &kp SQT &kp SLASH &kp BSLH   PARS &kp MINUS &kp EQUAL &kp SEMI &kp LBKT &kp RBKT  
                 &kp GRAVE   &kp Q   &kp W   &kp D   &kp F   &kp G        &cps   &kp B   &kp U   &kp O   &kp P   &kp BSPC 
-                &kp TAB     &kp A   &kp S   &kp R   &kp T   LSH          RSH    &kp H   &kp E   &kp I   &kp L   &tog 1
+                &kp TAB     &kp A   &kp S   &kp R   &kp T   LSH          RSH    &kp H   &kp E   &kp I   &kp L   &tog 1 
                 &key_repeat &kp Y   &kp X   &kp C   &kp V   &kp Z        &dot_s &kp N   &kp M   &kp K   &kp J   &kp DEL 
                                             DELWRD  &tog 2  &mo 1        &kp SPACE  &kp ENTER  LEADR  
             >; 
@@ -74,9 +74,9 @@
            label = " ^ ";
            bindings = <
                 ____  ____      ____    ____    ____    ____        ____    ____    ____    ____    ____    ____ 
-                ____  ____      &kp N7  &kp N8  &kp N9  &tog 2      ____    LOP     LGU     LCT     ____    ____
-                ____  &kp C_PP  &kp N4  &kp N5  &kp N6  ____        ____  &kp LEFT &kp UP &kp RIGHT &kp PG_UP   ____
-                ____  &kp N0    &kp N1  &kp N2  &kp N3  ____        ____  &kp HOME &kp DOWN &kp END &kp PG_DN   ____
+                ____  ____      &kp N7  &kp N8  &kp N9  &tog 2      ____  &kp HOME &kp UP   &kp END   &kp INS   ____
+                ____  &kp C_PP  &kp N4  &kp N5  &kp N6  ____        ____  &kp LEFT &kp DOWN &kp RIGHT &kp PG_UP ____
+                ____  &kp N0    &kp N1  &kp N2  &kp N3  ____        ____    LOP     LGU     LCT       &kp PG_DN ____
                               &kp C_VOL_DN &kp C_VOL_UP ____        ____  ____  ____  
            >; 
         };

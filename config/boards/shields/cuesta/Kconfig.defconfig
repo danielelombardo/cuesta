@@ -18,6 +18,17 @@ config ZMK_SPLIT_BLE_CENTRAL_BATTERY_LEVEL_PROXY
 config ZMK_USB
     default y
 	
+config CONFIG_RGBLED_WIDGET_BATTERY_SHOW_ONLY_PERIPHERALS
+    defaulf y
+
+config CONFIG_RGBLED_WIDGET_SHOW_LAYER_COLORS
+    default y
+
+config CONFIG_RGBLED_WIDGET_LAYER_1_COLOR
+    default 6
+
+config CONFIG_RGBLED_WIDGET_LAYER_2_COLOR
+    default 5
 endif
 
 
