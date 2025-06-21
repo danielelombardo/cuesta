@@ -19,7 +19,7 @@ config ZMK_USB
     default y
 	
 config CONFIG_RGBLED_WIDGET_BATTERY_SHOW_ONLY_PERIPHERALS
-    defaulf y
+    default y
 
 config CONFIG_RGBLED_WIDGET_SHOW_LAYER_COLORS
     default y
