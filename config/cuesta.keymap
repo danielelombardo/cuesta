@@ -2,72 +2,59 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 
-&caps_word { continue-list = <MINUS UNDERSCORE BSPC DEL LEFT RIGHT DOT COMMA SEMI SLASH>; };
+&caps_word { continue-list = <MINUS UNDERSCORE BSPC DEL LEFT RIGHT UP DOWN TAB DOT COMMA SEMI SLASH>; };
 &sk { release-after-ms = <3000>; quick-release; ignore-modifiers; };
 &sl { release-after-ms = <3000>; };
 
-#define ABC 0
-#define MOU 1
-#define NSY 2
-#define FUN 3
-
 #define xxxx &none
 #define ____ &trans
-#define ASH(l) &tkp LS(l) l 
-#define ssh(l) &skp LS(l) l 
 #define ks(l) &ksk l l 
-#define PARS &skp RPAR LPAR
-
-#define VX &tkp LC(X) LC(V)
-#define CZ &tkp LC(Z) LC(C)
-#define DELWRD &kp LA(BSPC)
-#define SWITCHWND &kp LG(GRAVE)
+#define LCT ks(LCTRL)
+#define LGU ks(LGUI)
+#define LOP ks(LALT)
+#define LSH ks(LSHFT)
+#define RCT ks(RCTRL)
+#define RGU ks(RGUI)
+#define ROP ks(RALT)
+#define RSH ks(RSHFT)
 #define LEADR &sk LG(LS(LA(LCTRL)))
 
+#define PARS &tkp RPAR LPAR
+#define DELWRD &kp LA(BSPC)
 
-#define ZMK_MOUSE_DEFAULT_MOVE_VAL 2000  // 600
-#define ZMK_MOUSE_DEFAULT_SCRL_VAL 50    // 10
+
+#define ZMK_MOUSE_DEFAULT_MOVE_VAL 3000  // 600
+#define ZMK_MOUSE_DEFAULT_SCRL_VAL 3000  // 10
 
 #include <dt-bindings/zmk/pointing.h>
-
 &mmv {
   acceleration-exponent = <1>;      // 1
-  time-to-max-speed-ms = <800>;    // 40
+  time-to-max-speed-ms = <700>;    // 40
 };
 
 &msc {
   acceleration-exponent = <1>;      // 0
-  time-to-max-speed-ms = <40>;    // 500
+  time-to-max-speed-ms = <700>;    // 500
 };
-
-#define MOU_U &mmv MOVE_UP
-#define MOU_D &mmv MOVE_DOWN
-#define MOU_L &mmv MOVE_LEFT
-#define MOU_R &mmv MOVE_RIGHT
-#define SCR_U &msc SCRL_UP 
-#define SCR_D &msc SCRL_DOWN
-#define MCK_L &mkp LCLK 
-#define MCK_R &mkp RCLK 
-
 
 
 / { 
     macros {
-        rst_all:  rst_all  { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <5>; tap-ms = <15>;
-            bindings = <&macro_release &kp LSHFT &kp LCTRL &kp LALT &kp LGUI &kp RSHFT &kp RCTRL &kp RALT &kp RGUI>, <&macro_tap &to 0>; };
         dot_spc:  dot_spc  { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <5>; tap-ms = <15>;
             bindings = <&macro_tap &kp DOT &kp SPACE &sk LSHFT>; };
+
+        rst_all:  rst_all  { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <5>; tap-ms = <15>;
+            bindings = <&macro_release &kp LSHFT &kp LCTRL &kp LALT &kp LGUI &kp RSHFT &kp RCTRL &kp RALT &kp RGUI>, <&macro_tap &to 0>; };
         tog_lay:  tog_lay  { compatible = "zmk,behavior-macro-one-param"; #binding-cells = <1>; 
             bindings = <&macro_pause_for_release>, <&macro_param_1to1>, <&macro_tap &tog MACRO_PLACEHOLDER>; };
     };
 
     behaviors {
-        mk:  moml_kp      { compatible = "zmk,behavior-hold-tap";  #binding-cells = <2>; flavor = "tap-preferred"; tapping-term-ms = <200>; bindings = <&mo>, <&kp>; }; 
-        tkp: two_kp       { compatible = "zmk,behavior-hold-tap";  #binding-cells = <2>; flavor = "tap-preferred"; tapping-term-ms = <175>; bindings = <&kp>, <&kp>; }; 
-        skp: slow_two_kp  { compatible = "zmk,behavior-hold-tap";  #binding-cells = <2>; flavor = "tap-preferred"; tapping-term-ms = <200>; bindings = <&kp>, <&kp>; }; 
-        ksk: kp_sk        { compatible = "zmk,behavior-hold-tap";  #binding-cells = <2>; flavor = "tap-preferred"; tapping-term-ms = <200>; bindings = <&kp>, <&sk>; }; 
-        mmd: moml_macro   { compatible = "zmk,behavior-hold-tap";  #binding-cells = <2>; flavor = "tap-preferred"; tapping-term-ms = <200>; bindings = <&mo>, <&dot_spc>; }; 
+        ksk: kp_sk        { compatible = "zmk,behavior-hold-tap";  #binding-cells = <2>; flavor = "tap-preferred"; tapping-term-ms = <500>; bindings = <&kp>, <&sk>; }; 
         blt: bluetoot     { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&bt BT_NXT>, <&bt BT_CLR>; mods = <(MOD_LALT|MOD_RALT)>; };
+        cps: caps_wrd     { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&caps_word>, <&kp CAPS>; mods = <(MOD_LSHFT)>; };
+
+        tkp: two_kp       { compatible = "zmk,behavior-hold-tap";  #binding-cells = <2>; flavor = "tap-preferred"; tapping-term-ms = <175>; bindings = <&kp>, <&kp>; }; 
     };
   
     keymap {
@@ -75,41 +62,34 @@
         abc {
             label = "abc";
             bindings = <
-                &kp ESC   &kp Q  &kp W  &kp D  &kp F  &rst_all        &rst_all     &kp L  &kp U  &kp O  &kp DEL    &tog MOU 
-                ks(LSHFT) &kp A  &kp S  &kp R  &kp T  &kp G           &key_repeat  &kp H  &kp E  &kp I  &kp P      ks(RSHFT) 
-                &kp CAPS  &kp Y  &kp X  &kp C  &kp V  &kp Z           &kp B        &kp N  &kp M  &kp K  &kp J      &caps_word 
-                ks(LCTRL) ks(LGUI) ks(LALT) &kp TAB &mk NSY BSPC      &mk FUN SPACE  &kp ENTER  ks(RALT)  ks(RGUI) ks(RCTRL)
+                &kp ESC   &kp COMMA &kp DOT &kp SQT &kp SLASH &kp BSLH   PARS &kp MINUS &kp EQUAL &kp SEMI &kp LBKT &kp RBKT  
+                &kp GRAVE   &kp Q   &kp W   &kp D   &kp F   &kp G        &cps   &kp B   &kp U   &kp O   &kp P   &kp BSPC 
+                &kp TAB     &kp A   &kp S   &kp R   &kp T   LSH          RSH    &kp H   &kp E   &kp I   &kp L   &tog 1
+                &key_repeat &kp Y   &kp X   &kp C   &kp V   &kp Z        &dot_s &kp N   &kp M   &kp K   &kp J   &kp DEL 
+                                            DELWRD  &tog 2  &mo 1        &kp SPACE  &kp ENTER  LEADR  
             >; 
         };
 
-        mou { 
-            label = " ~ ";
-            bindings = <
-                ____  xxxx  xxxx  xxxx  xxxx  xxxx       ____  SCR_U  MOU_U  SCR_D   xxxx   ____
-                ____  xxxx  xxxx  xxxx  xxxx  xxxx       ____  MOU_L  MOU_D  MOU_R   MCK_L  ____
-                ____  xxxx  xxxx  xxxx  xxxx  xxxx       ____  xxxx   xxxx &kp K_APP MCK_R  ____
-                ____  ____  ____  ____  ____            &tkp RSHFT SPACE  ____  ____  ____  ____
-            >;
+        raise {
+           label = " ^ ";
+           bindings = <
+                ____  ____      ____    ____    ____    ____        ____    ____    ____    ____    ____    ____ 
+                ____  ____      &kp N7  &kp N8  &kp N9  &tog 2      ____    LOP     LGU     LCT     ____    ____
+                ____  &kp C_PP  &kp N4  &kp N5  &kp N6  ____        ____  &kp LEFT &kp UP &kp RIGHT &kp PG_UP   ____
+                ____  &kp N0    &kp N1  &kp N2  &kp N3  ____        ____  &kp HOME &kp DOWN &kp END &kp PG_DN   ____
+                              &kp C_VOL_DN &kp C_VOL_UP ____        ____  ____  ____  
+           >; 
         };
 
-        nsy {
-            label = "123";
-            bindings = <
-                ____  ssh(N1)    ssh(N2)    ASH(N3)     ASH(N4)  ____          ____      ASH(N7)   ASH(N8)    ASH(N9)    ASH(N0)  ____ 
-                ____  ASH(MINUS) ASH(EQUAL) ASH(BSLH) ASH(SLASH) ASH(N5)       ASH(N6)   ASH(SQT)  ASH(SEMI)  ASH(COMMA) ASH(DOT) ____
-                ____  SWITCHWND  LEADR      ASH(GRAVE)  DELWRD   &blt          xxxx      &dot_spc  PARS       ssh(LBKT) ssh(RBKT) ____
-                ____  ____  ____  ____  ____                                                      &tog_lay NSY  ____  ____  ____  ____
-            >; 
-        };
-
-        fun {
-            label = " f# ";
-            bindings = <
-                ____ &kp F1  &kp F2  &kp F3  &kp F4  &kp F5        ____ &kp HOME   &kp UP    &kp END    &kp PG_UP  ____
-                ____ &kp F6  &kp F7  &kp F8  &kp F9  &kp F10       ____ &kp LEFT   &kp DOWN  &kp RIGHT  &kp PG_DN  ____
-                ____ &kp F11 &kp F12 &kp F13 &kp F14 &kp F15       xxxx &kp C_VOL_DN &kp C_MUTE  &kp C_VOL_UP &kp C_PP &tog_lay FUN
-                ____ ____  ____  ____  &tkp LSHFT BSPC                                     ____  ____  ____  ____  ____
-            >;
+        funmouse {
+           label = " ~ ";
+           bindings = <
+                ____  ____      &kp F11 &kp F12 &kp F13 ____        &blt    ____    ____    ____    ____    ____ 
+                ____  ____      &kp F7  &kp F8  &kp F9  &tog 2      ____    ____    ____    ____    ____    ____
+                ____  ____      &kp F4  &kp F5  &kp F6  ____        ____  &mmv MOVE_LEFT &mmv MOVE_UP &mmv MOVE_RIGHT   &kp K_APP   ____
+                ____  &kp F10   &kp F1  &kp F2  &kp F3  ____        ____  &msc SCRL_UP &mmv MOVE_DOWN &msc SCRL_DOWN    ____   ____
+                                            ____  ____  ____    &mkp LCLK &mkp MCLK &mkp RCLK     
+           >; 
         };
 
     };
