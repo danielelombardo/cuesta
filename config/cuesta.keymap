@@ -53,7 +53,7 @@
         ksk: kp_sk        { compatible = "zmk,behavior-hold-tap";  #binding-cells = <2>; flavor = "tap-preferred"; tapping-term-ms = <500>; bindings = <&kp>, <&sk>; }; 
         blt: bluetoot     { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&bt BT_NXT>, <&bt BT_CLR>; mods = <(MOD_LALT|MOD_RALT)>; };
         cps: caps_wrd     { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&caps_word>, <&kp CAPS>; mods = <(MOD_LSFT|MOD_RSFT)>; };
-        md2: mods_mo2     { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&mo 2>, <&mo3>; mods = <(MOD_LSFT|MOD_RSFT)>; };
+        ram: raise_mods   { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&mo 1>, <&mo 3>; mods = <(MOD_LSFT|MOD_RSFT)>; };
 
         tkp: two_kp       { compatible = "zmk,behavior-hold-tap";  #binding-cells = <2>; flavor = "tap-preferred"; tapping-term-ms = <175>; bindings = <&kp>, <&kp>; }; 
     };
@@ -67,7 +67,7 @@
                 &kp GRAVE   &kp Q   &kp W   &kp D   &kp F   &kp G        &cps   &kp B   &kp U   &kp O   &kp P   &kp BSPC 
                 &kp TAB     &kp A   &kp S   &kp R   &kp T   LSH          RSH    &kp H   &kp E   &kp I   &kp L   &mo 3 
                 &key_repeat &kp Y   &kp X   &kp C   &kp V   &kp Z        &dot_s &kp N   &kp M   &kp K   &kp J   &kp DEL 
-                                            DELWRD  &tog 2  &mo 1        &kp SPACE  &kp ENTER  LEADR  
+                                            DELWRD  &tog 2  &ram         &kp SPACE  &kp ENTER  LEADR  
             >; 
         };
 
