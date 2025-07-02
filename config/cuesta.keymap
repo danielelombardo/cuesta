@@ -65,20 +65,20 @@
             bindings = <
                 &kp ESC   &kp COMMA &kp DOT &kp SQT &kp SLASH &kp BSLH   PARS &kp MINUS &kp EQUAL &kp SEMI &kp LBKT &kp RBKT  
                 &kp GRAVE   &kp Q   &kp W   &kp D   &kp F   &kp G        &cps   &kp B   &kp U   &kp O   &kp P   &kp BSPC 
-                &kp TAB     &kp A   &kp S   &kp R   &kp T   LSH          RSH    &kp H   &kp E   &kp I   &kp L   &mo 3 
-                &key_repeat &kp Y   &kp X   &kp C   &kp V   &kp Z        &dot_s &kp N   &kp M   &kp K   &kp J   &kp DEL 
-                                            DELWRD  &tog 2  &ram         &kp SPACE  &kp ENTER  LEADR  
+                &kp TAB     &kp A   &kp S   &kp R   &kp T   LSH          RSH    &kp H   &kp E   &kp I   &kp L   &kp DEL 
+                &key_repeat &kp Y   &kp X   &kp C   &kp V   &kp Z        &dot_s &kp N   &kp M   &kp K   &kp J   &sl 3 
+                                            DELWRD  &mo 3   &mo 1        &kp SPACE  &kp ENTER  LEADR  
             >; 
         };
 
         raise {
            label = " ^ ";
            bindings = <
-                ____  ____      ____    ____    ____    ____        ____    ____    ____    ____        ____    ____ 
+                ____  ____      ____    ____    ____    ____        ____  ____     ____     ____        ____    ____ 
                 ____  ____      &kp N7  &kp N8  &kp N9  ____        ____  &kp HOME &kp UP   &kp END     ____    ____
-                ____  &kp C_PP  &kp N4  &kp N5  &kp N6  ____        ____  &kp LEFT &kp DOWN &kp RIGHT   &tog_lay 1  ____
+                ____  &tog 2    &kp N4  &kp N5  &kp N6  ____        ____  &kp LEFT &kp DOWN &kp RIGHT   &tog_lay 1  ____
                 ____  &kp N0    &kp N1  &kp N2  &kp N3  ____        ____ &kp PG_UP &kp INS  &kp PG_DN   ____    ____
-                              &kp C_VOL_DN &kp C_VOL_UP ____        ____  ____  ____  
+                                            ____  ____  ____        ____  ____  ____ 
            >; 
         };
 
@@ -86,9 +86,9 @@
            label = "f. ";
            bindings = <
                 ____  ____      &kp F11 &kp F12 &kp F13 ____        &blt    ____    ____    ____    ____    ____ 
-                ____  ____      &kp F7  &kp F8  &kp F9  ____        ____  &msc SCRL_UP &mmv MOVE_UP &msc SCRL_DOWN      ____        ____
-                ____  ____      &kp F4  &kp F5  &kp F6  ____        ____  &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &kp K_APP   ____
-                ____  &kp F10   &kp F1  &kp F2  &kp F3  ____        ____    ____    ____    ____    ____    ____
+                ____  ____      &kp F7  &kp F8  &kp F9  ____        ____  &msc SCRL_UP &mmv MOVE_UP &msc SCRL_DOWN      ____    ____ 
+                ____  &tog 2    &kp F4  &kp F5  &kp F6  ____        ____  &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT ____    ____ 
+                ____  &kp F10   &kp F1  &kp F2  &kp F3  ____        ____    ____    ____    ____    ____    &kp K_APP
                                             ____  ____  ____    &mkp LCLK &mkp MCLK &mkp RCLK     
            >; 
         };
@@ -98,8 +98,8 @@
            bindings = <
                 ____  ____  ____    ____    ____    ____        ____    ____    ____    ____    ____    ____ 
                 ____  ____  ____    ____    ____    ____        ____    ____    ____    ____    ____    ____ 
-                ____  LSH   LCT     LGU     LOP     ____        ____    ____    ____    RGU     RCT     ____
-                ____  ____  ____    ____    ____    ____        ____    ____    ROP     ____    ____    ____ 
+                ____  LSH   LCT     LGU     LOP     ____        ____    ROP     RGU     RCT     RSH     ____
+                ____ &kp C_PP &kp C_VOL_DN &kp C_VOL_UP ____ ____  ____ ____    ____    ____    ____    ____ 
                                     ____    ____    ____        ____    ____    ____ 
            >; 
         };
