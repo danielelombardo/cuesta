@@ -8,7 +8,6 @@
 
 #define xxxx &none
 #define ____ &trans
-#define _00_ &to 0
 #define ks(l) &ksk l l 
 #define LCT ks(LCTRL)
 #define LGU ks(LGUI)
@@ -53,7 +52,7 @@
 
     behaviors {
         ksk: kp_sk        { compatible = "zmk,behavior-hold-tap";  #binding-cells = <2>; flavor = "tap-preferred"; tapping-term-ms = <500>; bindings = <&kp>, <&sk>; }; 
-        tomo: to_mo      { compatible = "zmk,behavior-hold-tap";  #binding-cells = <2>; flavor = "tap-preferred"; tapping-term-ms = <500>; bindings = <&to>, <&mo>; }; 
+        tomo: to_mo       { compatible = "zmk,behavior-hold-tap";  #binding-cells = <2>; flavor = "tap-preferred"; tapping-term-ms = <500>; bindings = <&to>, <&mo>; }; 
         blt: bluetoot     { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&bt BT_NXT>, <&bt BT_CLR>; mods = <MOD_RALT>; };
         cps: caps_wrd     { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&caps_word>, <&kp CAPS>; mods = <(MOD_LSFT|MOD_RSFT)>; };
 
@@ -112,7 +111,7 @@
                 ____        ____    ____    ____    ____    ____        ____    ____     ____     ____      ____ ____ 
                 ____        ____    &to 1   &to 2   &to 3   ____        ____  &kp HOME   &kp UP   &kp END   ____ ____
                 ____        LSH     LCT     LGU     LOP     ____        ____  &kp LEFT   &kp DOWN &kp RIGHT ____ ____
-                ____        ____    ____    ____    ____    ____        ____  &kp PG_UP  &kp INS  &kp PG_DN C_VOL_DN &kp C_VOL_UP 
+                ____        ____    ____    ____    ____    ____        ____  &kp PG_UP  &kp INS  &kp PG_DN &kp C_VOL_DN &kp C_VOL_UP 
                                             ____    ____    RST         ____  ____  ____ 
            >; 
         };
