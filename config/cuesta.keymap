@@ -4,10 +4,11 @@
 
 &caps_word { continue-list = <MINUS UNDERSCORE BSPC DEL LEFT RIGHT UP DOWN TAB DOT COMMA SEMI SLASH>; };
 &sk { release-after-ms = <3000>; quick-release; ignore-modifiers; };
-&sl { release-after-ms = <3000>; };
+// &sl { release-after-ms = <3000>; };
 
 #define xxxx &none
 #define ____ &trans
+#define _00_ &to 0
 #define ks(l) &ksk l l 
 #define LCT ks(LCTRL)
 #define LGU ks(LGUI)
@@ -18,9 +19,10 @@
 #define ROP ks(RALT)
 #define RSH ks(RSHFT)
 #define LEADR &sk LG(LS(LA(LCTRL)))
-
-#define PARS &tkp RPAR LPAR
 #define DELWRD &kp LA(BSPC)
+#define NAV &tomo 1 4
+#define RST &tomo 0 4
+#define PARS &tkp RPAR LPAR
 
 
 #define ZMK_MOUSE_DEFAULT_MOVE_VAL 4000  // 600
@@ -51,9 +53,9 @@
 
     behaviors {
         ksk: kp_sk        { compatible = "zmk,behavior-hold-tap";  #binding-cells = <2>; flavor = "tap-preferred"; tapping-term-ms = <500>; bindings = <&kp>, <&sk>; }; 
-        blt: bluetoot     { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&bt BT_NXT>, <&bt BT_CLR>; mods = <(MOD_LALT|MOD_RALT)>; };
+        tomo: to_mo      { compatible = "zmk,behavior-hold-tap";  #binding-cells = <2>; flavor = "tap-preferred"; tapping-term-ms = <500>; bindings = <&to>, <&mo>; }; 
+        blt: bluetoot     { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&bt BT_NXT>, <&bt BT_CLR>; mods = <MOD_RALT>; };
         cps: caps_wrd     { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&caps_word>, <&kp CAPS>; mods = <(MOD_LSFT|MOD_RSFT)>; };
-        ram: raise_mods   { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&mo 1>, <&mo 3>; mods = <(MOD_LSFT|MOD_RSFT)>; };
 
         tkp: two_kp       { compatible = "zmk,behavior-hold-tap";  #binding-cells = <2>; flavor = "tap-preferred"; tapping-term-ms = <175>; bindings = <&kp>, <&kp>; }; 
     };
@@ -61,49 +63,70 @@
     keymap {
         compatible = "zmk,keymap";
         abc {
-            label = "abc";
+            display-name = "abc";
             bindings = <
                 &kp ESC   &kp COMMA &kp DOT &kp SQT &kp SLASH &kp BSLH   PARS &kp MINUS &kp EQUAL &kp SEMI &kp LBKT &kp RBKT  
                 &kp GRAVE   &kp Q   &kp W   &kp D   &kp F   &kp G        &cps   &kp B   &kp U   &kp O   &kp P   &kp BSPC 
                 &kp TAB     &kp A   &kp S   &kp R   &kp T   LSH          RSH    &kp H   &kp E   &kp I   &kp L   &kp DEL 
-                &key_repeat &kp Y   &kp X   &kp C   &kp V   &kp Z        &dot_s &kp N   &kp M   &kp K   &kp J   &sl 3 
-                                            DELWRD  &mo 3   &mo 1        &kp SPACE  &kp ENTER  LEADR  
+                &key_repeat &kp Y   &kp X   &kp C   &kp V   &kp Z        &dot_s &kp N   &kp M   &kp K   &kp J   &to 4 
+                                            LEADR   &mo 5   NAV          &kp SPACE  &kp ENTER  DELWRD  
             >; 
         };
 
+        numbers {
+           display-name = "123";
+           bindings = <
+                ____        ____    ____    ____    ____    ____        ____    ____    ____    ____    ____    ____ 
+                ____        ____    ____    ____    ____    ____        ____    &kp N7  &kp N8  &kp N9  ____    ____
+                ____        LSH     LCT     LGU     LOP     ____        ____    &kp N4  &kp N5  &kp N6  ____    ____
+                ____        ____    ____    ____    ____    ____        ____    &kp N1  &kp N2  &kp N3  &kp N0  ____
+                                            ____    ____    RST         ____  ____  ____ 
+           >; 
+        };
+
+        mouse {
+           display-name = "mou";
+           bindings = <
+                ____        ____    ____    ____    ____    ____        ____    ____    ____     ____       ____ ____ 
+                ____        ____    ____    ____    ____    ____        ____ &msc SCRL_UP &mmv MOVE_UP &msc SCRL_DOWN ____ ____ 
+                ____        ____ &mkp RCLK &mkp MCLK &mkp LCLK ____     ____ &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT ____ ____ 
+                ____        ____    ____    ____    ____    ____        ____    ____    ____    &kp K_APP   ____ ____ 
+                                            ____    ____    RST         ____  ____  ____ 
+           >; 
+        };
+
+        functions {
+           display-name = "fun";
+           bindings = <
+                ____        ____    ____    ____    ____    ____        &blt    &kp F11 &kp F12 &kp F13 ____    ____ 
+                ____        ____    ____    ____    ____    ____        ____    &kp F7  &kp F8  &kp F9  ____    ____
+                ____        LSH     LCT     LGU     LOP     ____        ____    &kp F4  &kp F5  &kp F6  ____    ____
+                ____        ____    ____    ____    ____    ____        ____    &kp F1  &kp F2  &kp F3  &kp F10 ____
+                                            ____    ____    RST         ____  ____  ____ 
+           >; 
+        };
+
         raise {
-           label = " ^ ";
+           display-name = " ^ ";
            bindings = <
-                ____  ____      ____    ____    ____    ____        ____  ____     ____     ____        ____    ____ 
-                ____  ____      &kp N7  &kp N8  &kp N9  ____        ____  &kp HOME &kp UP   &kp END     ____    ____
-                ____  &tog 2    &kp N4  &kp N5  &kp N6  ____        ____  &kp LEFT &kp DOWN &kp RIGHT   &tog_lay 1  ____
-                ____  &kp N0    &kp N1  &kp N2  &kp N3  ____        ____ &kp PG_UP &kp INS  &kp PG_DN   ____    ____
-                                            ____  ____  ____        ____  ____  ____ 
+                ____        ____    ____    ____    ____    ____        ____    ____     ____     ____      ____ ____ 
+                ____        ____    &to 1   &to 2   &to 3   ____        ____  &kp HOME   &kp UP   &kp END   ____ ____
+                ____        LSH     LCT     LGU     LOP     ____        ____  &kp LEFT   &kp DOWN &kp RIGHT ____ ____
+                ____        ____    ____    ____    ____    ____        ____  &kp PG_UP  &kp INS  &kp PG_DN C_VOL_DN &kp C_VOL_UP 
+                                            ____    ____    RST         ____  ____  ____ 
            >; 
         };
 
-        funmouse {
-           label = "f. ";
+        lower {
+           display-name = " ~ ";
            bindings = <
-                ____  ____      &kp F11 &kp F12 &kp F13 ____        &blt    ____    ____    ____    ____    ____ 
-                ____  ____      &kp F7  &kp F8  &kp F9  ____        ____  &msc SCRL_UP &mmv MOVE_UP &msc SCRL_DOWN      ____    ____ 
-                ____  &tog 2    &kp F4  &kp F5  &kp F6  ____        ____  &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT ____    ____ 
-                ____  &kp F10   &kp F1  &kp F2  &kp F3  ____        ____    ____    ____    ____    ____    &kp K_APP
-                                            ____  ____  ____    &mkp LCLK &mkp MCLK &mkp RCLK     
+                ____        ____    ____    ____    ____    ____        ____    ____    ____    ____    ____    ____ 
+                ____        ____    ____    ____    ____    ____        ____    &to 1   &to 2   &to 3   ____    ____
+                ____        ____    ____    ____    ____    ____        ____    ROP     RGU     RCT     RSH     ____
+                ____        ____    ____    ____    ____    ____        ____    ____    ____    ____    ____    ____
+                                            ____    ____    RST         ____  ____  ____ 
            >; 
         };
-
-        modis {
-           label = " ~ ";
-           bindings = <
-                ____  ____  ____    ____    ____    ____        ____    ____    ____    ____    ____    ____ 
-                ____  ____  ____    ____    ____    ____        ____    ____    ____    ____    ____    ____ 
-                ____  LSH   LCT     LGU     LOP     ____        ____    ROP     RGU     RCT     RSH     ____
-                ____ &kp C_PP &kp C_VOL_DN &kp C_VOL_UP ____ ____  ____ ____    ____    ____    ____    ____ 
-                                    ____    ____    ____        ____    ____    ____ 
-           >; 
-        };
-
 
     };
 };
