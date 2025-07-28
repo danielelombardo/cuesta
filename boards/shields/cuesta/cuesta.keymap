@@ -51,8 +51,8 @@
     };
 
     behaviors {
-        ksk: kp_sk        { compatible = "zmk,behavior-hold-tap";  #binding-cells = <2>; flavor = "tap-preferred"; tapping-term-ms = <500>; bindings = <&kp>, <&sk>; }; 
-        moto: mo_to       { compatible = "zmk,behavior-hold-tap";  #binding-cells = <2>; flavor = "tap-preferred"; tapping-term-ms = <500>; bindings = <&mo>, <&to>; }; 
+        ksk: kp_sk        { compatible = "zmk,behavior-hold-tap";  #binding-cells = <2>; flavor = "balanced"; bindings = <&kp>, <&sk>; }; 
+        moto: mo_to       { compatible = "zmk,behavior-hold-tap";  #binding-cells = <2>; flavor = "balanced"; bindings = <&mo>, <&to>; }; 
         blt: bluetoot     { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&bt BT_NXT>, <&bt BT_CLR>; mods = <MOD_RALT>; };
         cps: caps_wrd     { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&caps_word>, <&kp CAPS>; mods = <(MOD_LSFT|MOD_RSFT)>; };
 
