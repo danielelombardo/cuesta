@@ -77,7 +77,7 @@
            bindings = <
                 ____        ____    ____    ____    ____    ____        ____    ____    ____    ____    ____    ____ 
                 ____        ____    ____    ____    ____    ____        ____    &kp N7  &kp N8  &kp N9  ____    ____
-                ____        LSH     LCT     LGU     LOP     ____        ____    &kp N4  &kp N5  &kp N6  ____    ____
+                ____        LSH     LCT     LGU     LOP     ____        ____    &kp N4  &kp N5  &kp N6  RST     ____
                 ____        ____    ____    ____    ____    ____        ____    &kp N1  &kp N2  &kp N3  &kp N0  ____
                                             ____    ____    RST         ____  ____  ____ 
            >; 
@@ -88,7 +88,7 @@
            bindings = <
                 ____        ____    ____    ____    ____    ____        ____    ____    ____     ____       ____ ____ 
                 ____        ____    ____    ____    ____    ____        ____ &msc SCRL_UP &mmv MOVE_UP &msc SCRL_DOWN ____ ____ 
-                ____        ____ &mkp RCLK &mkp MCLK &mkp LCLK ____     ____ &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT ____ ____ 
+                ____        ____ &mkp RCLK &mkp MCLK &mkp LCLK ____     ____ &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT RST  ____ 
                 ____        ____    ____    ____    ____    ____        ____    ____    ____    &kp K_APP   ____ ____ 
                                             ____    ____    RST         ____  ____  ____ 
            >; 
@@ -99,7 +99,7 @@
            bindings = <
                 ____        ____    ____    ____    ____    ____        &blt    &kp F11 &kp F12 &kp F13 ____    ____ 
                 ____        ____    ____    ____    ____    ____        ____    &kp F7  &kp F8  &kp F9  ____    ____
-                ____        LSH     LCT     LGU     LOP     ____        ____    &kp F4  &kp F5  &kp F6  ____    ____
+                ____        LSH     LCT     LGU     LOP     ____        ____    &kp F4  &kp F5  &kp F6  RST     ____
                 ____        ____    ____    ____    ____    ____        ____    &kp F1  &kp F2  &kp F3  &kp F10 ____
                                             ____    ____    RST         ____  ____  ____ 
            >; 
@@ -110,8 +110,8 @@
            bindings = <
                 ____        ____    ____    ____    ____    ____        ____    ____     ____     ____      ____ ____ 
                 ____        ____    &to 1   &to 2   &to 3   ____        ____  &kp HOME   &kp UP   &kp END   ____ ____
-                ____        LSH     LCT     LGU     LOP     ____        ____  &kp LEFT   &kp DOWN &kp RIGHT ____ ____
-                ____        ____    ____    ____    ____    ____        ____  &kp PG_UP  &kp INS  &kp PG_DN &kp C_VOL_DN &kp C_VOL_UP 
+                ____        LSH     LCT     LGU     LOP     ____        ____  &kp LEFT   &kp DOWN &kp RIGHT RST  ____
+                ____        ____    ____    LEADR   ____    ____        ____  &kp PG_UP  &kp INS  &kp PG_DN &kp C_VOL_DN &kp C_VOL_UP 
                                             ____    ____    RST         ____  ____  ____ 
            >; 
         };
@@ -122,7 +122,7 @@
                 ____        ____    ____    ____    ____    ____        ____    ____    ____    ____    ____    ____ 
                 ____        ____    ____    ____    ____    ____        ____    &to 1   &to 2   &to 3   ____    ____
                 ____        ____    ____    ____    ____    ____        ____    ROP     RGU     RCT     RSH     ____
-                ____        ____    ____    ____    ____    ____        ____    ____    ____    ____    ____    ____
+                ____        ____    ____    ____    ____    ____        ____    ____    LEADR   ____    ____    ____
                                             ____    ____    RST         ____  ____  ____ 
            >; 
         };
