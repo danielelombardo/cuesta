@@ -63,12 +63,12 @@
         compatible = "zmk,keymap";
         abc {
             display-name = "abc";
-            bindings = <
-                &kp ESC   &kp COMMA &kp DOT &kp SQT &kp SLASH &kp BSLH   PARS &kp MINUS &kp EQUAL &kp SEMI &kp LBKT &kp RBKT  
-                &kp GRAVE   &kp Q   &kp W   &kp D   &kp F   &kp G        &cps   &kp B   &kp U   &kp O   &kp P   &kp BSPC 
-                &kp TAB     &kp A   &kp S   &kp R   &kp T   LSH          RSH    &kp H   &kp E   &kp I   &kp L   &kp DEL 
-                &key_repeat &kp Y   &kp X   &kp C   &kp V   &kp Z        &dot_s &kp N   &kp M   &kp K   &kp J   &to 4 
-                                            LEADR   &mo 5   NAV          &kp SPACE  &kp ENTER  DELWRD  
+            bindings = <  
+                &kp GRAVE   &kp COMMA &kp DOT &kp SQT &kp SLASH &kp BSLH  PARS &kp MINUS &kp EQUAL &kp SEMI &kp LBKT &kp RBKT  
+                &kp Q       &kp W   &kp E   &kp R   &kp T   &kp Z       &dot_s  &kp U   &kp I   &kp O   &kp P   &kp BSPC 
+                &kp ESC     &kp A   &kp S   &kp D   &kp F   &kp G       LEADR   &kp H   &kp J   &kp K   &kp L   &kp DEL 
+                &kp TAB     LSH     &kp Y   &kp X   &kp C   &kp V       &kp B   &kp N   &kp M   &cps    RSH     &to 4 
+                                        &key_repeat &mo 5   NAV         &kp SPACE  &kp ENTER  DELWRD 
             >; 
         };
 
