@@ -63,7 +63,7 @@
                 &kp Q   &kp W   &kp E   &kp R   &kp T   &kp Z   &shf_sym    &kp U       &kp I       &kp O       &kp P       &kp DEL 
                 &kp ESC &kp A   &kp S   &kp D   &kp F   &kp G   SLN         &kp H       &kp J       &kp K       &kp L       &kp BSPC 
                 &kp TAB LSH     &kp Y   &kp X   &kp C   &kp V   &kp B       &kp N       &kp M       &cps        &kp ENTER   MOU 
-                REP     LEADR   LCT     LGU     LOP     NUM     &kp SPACE   &kp LEFT    &kp UP      &kp DOWN    &kp RIGHT   &to 1 
+                REP     LEADR   LCT     LOP     LGU     NUM     &kp SPACE   &kp LEFT    &kp UP      &kp DOWN    &kp RIGHT   &to 1 
             >; 
         };
 
@@ -74,7 +74,7 @@
                 ____    ____        ____    ____        ____        ____    ____        ____    ____    ____    ____    ____ 
                 ____    ____        ____    ____        ____        ____    ____        ____    ____    ____    ____    ____ 
                 ____    ____        ____    ____        ____        ____    ____        ____    ____    ____    ____    ____ 
-                ____    &kp LEFT    &kp UP  &kp DOWN    &kp RIGHT   NUM     &kp SPACE   ROP     RGU     RCT     LEADR   &to 0 
+                ____    &kp LEFT    &kp UP  &kp DOWN    &kp RIGHT   NUM     &kp SPACE   RGU     ROP     RCT     LEADR   &to 0 
             >; 
         };
 
