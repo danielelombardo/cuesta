@@ -1,0 +1,12 @@
+if SHIELD_FOXYDUCK
+
+config ZMK_KEYBOARD_NAME
+	default "foxyduck"
+
+config ZMK_USB
+    default y
+
+config ZMK_POINTING
+    default y
+    
+endif
