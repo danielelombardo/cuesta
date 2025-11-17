@@ -41,8 +41,6 @@
 
 / { 
     macros {
-        shf_sym: shift_symbols { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <5>; tap-ms = <15>;
-            bindings = <&macro_tap &sk LSHFT SLN>; };
     };
 
     behaviors {
