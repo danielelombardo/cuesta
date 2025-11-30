@@ -13,13 +13,13 @@
 #
 # settings_reset: use when left and right side are switched on different boards
 ---
-# board: [ "seeeduino_xiao_ble" ]
-# shield: [ "cuesta_left", "cuesta_right" ]
+board: [ "nice_nano_v2" ]
+shield: [ "foxyduck", "sosuke", "sosuke_dongle" ]
 
-include:
+# include:
   # - board: seeeduino_xiao_ble
   #   shield: cuesta_dongle rgbled_adapter
-  - board: nice_nano_v2
-    shield: altiplano_main
-  - board: nice_nano_v2
-    shield: foxyduck
+  # - board: nice_nano_v2
+  #   shield: altiplano_main
+  # - board: nice_nano_vy2
+  #   shield: foxyduck sosuke sosuke_dongle
