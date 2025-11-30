@@ -3,8 +3,8 @@
 // #include <dt-bindings/zmk/bt.h>
 
 &caps_word { continue-list = <MINUS UNDERSCORE BSPC DEL LEFT RIGHT DOT COMMA SEMI SLASH>; };
-&sk { release-after-ms = <2000>; lazy; };
-&sl { release-after-ms = <1500>; /delete-property/ quick-release; };
+&sk { release-after-ms = <2000>; quick-release; lazy; }; // /delete-property/ ignore-modifiers;
+&sl { release-after-ms = <1500>; };
 
 
 #define xxxx &none
