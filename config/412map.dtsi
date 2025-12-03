@@ -49,6 +49,10 @@
         motg: mo_tog      { compatible = "zmk,behavior-hold-tap";  #binding-cells = <2>; flavor = "balanced"; tapping-term-ms = <200>; bindings = <&mo>, <&tog>; }; 
 //        blt: bluetoot     { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&bt BT_NXT>, <&bt BT_CLR>; mods = <MOD_RALT>; };
         cps: caps_wrd     { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&caps_word>, <&kp CAPS>; mods = <MOD_LSFT>; };
+        lhome: left_home  { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&kp LEFT>, <&kp HOME>; mods = <MOD_RSFT>; };
+        rend: right_end   { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&kp RIGHT>, <&kp END>; mods = <MOD_RSFT>; };
+        dpgdn: down_pgdn  { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&kp DOWN>, <&kp PG_DN>; mods = <MOD_RSFT>; };
+        upgup: up_pgup    { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&kp UP>, <&kp PG_UP>; mods = <MOD_RSFT>; };
     };
   
     keymap {
@@ -60,7 +64,7 @@
                 &kp Q   &kp W   &kp E   &kp R   &kp T   &kp Z   VOLUP       &kp U       &kp I       &kp O       &kp P       &kp DEL 
                 &kp TAB &kp A   &kp S   &kp D   &kp F   &kp G   VOLDN       &kp H       &kp J       &kp K       &kp L       &kp BSPC 
                 &kp ESC LSH     &kp Y   &kp X   &kp C   &kp V   &kp B       &kp N       &kp M       &cps        &kp ENTER   MOU 
-                REP     LEADR   LCT     LOP     LGU     NUM     &kp SPACE   &kp LEFT    &kp DOWN    &kp UP    &kp RIGHT   &to 1 
+                REP     LEADR   LCT     LOP     LGU     NUM     &kp SPACE   &kp LEFT    &kp DOWN    &kp UP      &kp RIGHT   &to 1 
             >; 
         };
 
@@ -82,7 +86,7 @@
                 ____    ____    ____    ____    ____    ____    ____    ____    ____    ____    ____    ____ 
                 ____    ____    ____    ____    ____    ____    ____    ____    ____    ____    ____    ____ 
                 ____    ____    ____    ____    ____    ____    ____    ____    ____    ____    ____    ____ 
-                ____    LSH   LGU     LOP     LCT     ____    ____    ____    ____    ____    ____    &to 0 
+                ____    RSH     LGU     LOP     LCT     ____    ____    &lhome  &dpgdn  &upgup  &rend   &to 0 
             >; 
         };
 
