@@ -1,4 +1,4 @@
-if SHIELD_ALTIPLANO_MAIN
+if SHIELD_ALTIPLANO
 
 config ZMK_KEYBOARD_NAME
 	default "altiplano"
