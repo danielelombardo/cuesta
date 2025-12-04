@@ -1,2 +1,35 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
+
+#define xxxx &none
+#define ____ &trans
+#define LCT ks(LCTRL)
+#define LGU ks(LGUI)
+#define LOP ks(LALT)
+#define LSH ks(LSHFT)
+#define RCT ks(RCTRL)
+#define RGU ks(RGUI)
+#define ROP ks(RALT)
+#define RSH ks(RSHFT)
+#define LEADR &sk LG(LS(LA(LCTRL)))
+#define REP &key_repeat
+#define VOLDN &kp C_VOL_DN
+#define VOLUP &kp C_VOL_UP
+#define VMUTE &kp C_MUTE
+
+/ { 
+
+    keymap {
+        compatible = "zmk,keymap";
+        abc {
+            display-name = "ABC";
+            bindings = <
+            //  1       2       3       4       5       6       7           8           9           10          11          12 
+                &kp Q   &kp W   &kp E   &kp R   &kp T   &kp Z   VOLUP       &kp U       &kp I       &kp O       &kp P       &kp DEL 
+                &kp TAB &kp A   &kp S   &kp D   &kp F   &kp G   VOLDN       &kp H       &kp J       &kp K       &kp L       &kp BSPC 
+                &kp ESC LSH     &kp Y   &kp X   &kp C   &kp V   &kp B       &kp N       &kp M       ____        &kp ENTER   ____ 
+                REP     LEADR   LCT     LOP     LGU     ____    &kp SPACE   &kp LEFT    &kp UP      &kp DOWN    &kp RIGHT   ____ 
+            >; 
+        };
+    }; 
+};
