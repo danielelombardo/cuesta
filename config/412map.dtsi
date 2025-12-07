@@ -45,14 +45,14 @@
     };
 
     behaviors {
-        ksk: kp_sk        { compatible = "zmk,behavior-hold-tap";  #binding-cells = <2>; flavor = "balanced"; tapping-term-ms = <200>; bindings = <&kp>, <&sk>; }; 
-        motg: mo_tog      { compatible = "zmk,behavior-hold-tap";  #binding-cells = <2>; flavor = "balanced"; tapping-term-ms = <200>; bindings = <&mo>, <&tog>; }; 
+        ksk: kp_sk          { compatible = "zmk,behavior-hold-tap";  #binding-cells = <2>; flavor = "balanced"; tapping-term-ms = <200>; bindings = <&kp>, <&sk>; }; 
+        motg: mo_tog        { compatible = "zmk,behavior-hold-tap";  #binding-cells = <2>; flavor = "balanced"; tapping-term-ms = <200>; bindings = <&mo>, <&tog>; }; 
 //        blt: bluetoot     { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&bt BT_NXT>, <&bt BT_CLR>; mods = <MOD_RALT>; };
-        cps: caps_wrd     { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&caps_word>, <&kp CAPS>; mods = <MOD_LSFT>; };
-        lhome: left_home  { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&kp LEFT>, <&kp HOME>; mods = <MOD_RSFT>; };
-        rend: right_end   { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&kp RIGHT>, <&kp END>; mods = <MOD_RSFT>; };
-        dpgdn: down_pgdn  { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&kp DOWN>, <&kp PG_DN>; mods = <MOD_RSFT>; };
-        upgup: up_pgup    { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&kp UP>, <&kp PG_UP>; mods = <MOD_RSFT>; };
+        cps: caps_wrd       { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&caps_word>, <&kp CAPS>; mods = <MOD_LSFT>; };
+        lhome: left_home    { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&kp LEFT>, <&kp HOME>; mods = <MOD_RSFT>; };
+        rend: right_end     { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&kp RIGHT>, <&kp END>; mods = <MOD_RSFT>; };
+        dpgdn: down_pgdn    { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&kp DOWN>, <&kp PG_DN>; mods = <MOD_RSFT>; };
+        upgup: up_pgup      { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&kp UP>, <&kp PG_UP>; mods = <MOD_RSFT>; };
     };
   
     keymap {
@@ -93,22 +93,22 @@
         num {
             display-name = "NUM";
             bindings = <
-            //  1           2           3       4       5       6           7       8           9           10          11          12 
-                &kp PG_UP   &kp PG_DN   &kp N1  &kp N2  &kp N3  ____        ____    &kp LBKT    &kp RBKT    &kp BSLH    &kp GRAVE   ____ 
-                ____        &kp N0      &kp N4  &kp N5  &kp N6  &kp HOME    &kp END &kp SEMI    &kp SQT     &kp MINUS   &kp EQUAL   ____ 
-                ____        ____        &kp N7  &kp N8  &kp N9  ____        VMUTE   &kp COMMA   &kp DOT     &kp SLASH   ____        ____ 
-                ____        ____        ____    ____    ____    ____        ____    ____        ____        ____        ____        ____ 
+            //  1           2           3       4       5       6       7       8           9           10          11          12 
+                &kp RPAR    &kp LPAR    &kp N1  &kp N2  &kp N3  xxxx    ____    &kp LBKT    &kp RBKT    &kp BSLH    &kp GRAVE   ____ 
+                ____        &kp N0      &kp N4  &kp N5  &kp N6  xxxx    ____    &kp SEMI    &kp SQT     &kp MINUS   &kp EQUAL   ____ 
+                ____        ____        &kp N7  &kp N8  &kp N9  xxxx    VMUTE   &kp COMMA   &kp DOT     &kp SLASH   ____        ____ 
+                ____        ____        ____    ____    ____    ____    ____    ____        ____        ____        ____        ____ 
             >; 
         };
 
         fun {
             display-name = "FUN";
             bindings = <
-            //  1       2       3           4               5               6       7       8               9               10              11              12 
-                &kp F1  &kp F2  &kp F3      &kp F4          &kp F5          &kp F6  &kp F7  &kp F8          &kp F9          &kp F10         &kp F11         &kp F12 
-                ____    ____    &kp INS     &msc SCRL_DOWN  &msc SCRL_UP    ____    ____    ____            ____            ____            ____            ____ 
-                ____    ____    &mkp RCLK   &mkp MCLK       &mkp LCLK       ____    ____    &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP    &mmv MOVE_RIGHT ____ 
-                ____    ____    ____        ____            ____            MOU     ____    ____            ____            ____            ____            ____ 
+            //  1       2           3           4           5           6       7       8               9               10              11              12 
+                &kp F1  &kp F2      &kp F3      &kp F4      &kp F5      &kp F6  &kp F7  &kp F8          &kp F9          &kp F10         &kp F11         &kp F12 
+                ____    &kp PG_UP   &kp HOME    &kp END     &kp PG_DN   ____    ____    &msc SCRL_UP    &msc SCRL_DOWN  &kp INS         ____            ____ 
+                ____    ____        &mkp RCLK   &mkp MCLK   &mkp LCLK   ____    ____    &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP    &mmv MOVE_RIGHT ____ 
+                ____    ____        ____        ____        ____        MOU     ____    ____            ____            ____            ____            ____ 
             >; 
         }; 
     }; 
