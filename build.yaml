@@ -21,7 +21,7 @@ include:
   #   shield: sosuke_dongle rgbled_adapter 
     # shield: settings_reset
   - board: nice_nano_v2
-    shield: altiplano
-    # shield: foxyduck
+    shield: foxyduck
+    # shield: altiplano
   #   shield: sosuke
   #   shield: settings_reset
