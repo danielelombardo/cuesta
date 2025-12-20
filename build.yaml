@@ -17,7 +17,7 @@
 # shield: [ "foxyduck", "sosuke", "sosuke_dongle" ]
 
 include:
-  - board: seeeduino_xiao_ble
+  - board: xiao_ble
     shield: zukuma rgbled_adapter 
     # shield: settings_reset
   # - board: nice_nano_v2
