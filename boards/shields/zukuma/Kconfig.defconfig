@@ -1,0 +1,12 @@
+if SHIELD_ZUKUMA
+
+config ZMK_KEYBOARD_NAME
+	default "zukuma"
+
+config ZMK_USB
+    default y
+
+config ZMK_POINTING
+    default y
+    
+endif
