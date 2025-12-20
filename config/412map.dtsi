@@ -28,12 +28,12 @@
 #define MOU &motg 4 4
 #define RST &to 0
 
-#define ZMK_MOUSE_DEFAULT_MOVE_VAL 7000  // 600
-#define ZMK_MOUSE_DEFAULT_SCRL_VAL 9000  // 10
+#define ZMK_MOUSE_DEFAULT_MOVE_VAL 10000  // 600
+#define ZMK_MOUSE_DEFAULT_SCRL_VAL 10000  // 10
 #include <dt-bindings/zmk/pointing.h>
 &mmv {
   acceleration-exponent = <1>;      // 1
-  time-to-max-speed-ms = <700>;    // 40
+  time-to-max-speed-ms = <300>;    // 40
 };
 &msc {
   acceleration-exponent = <0>;      // 0
