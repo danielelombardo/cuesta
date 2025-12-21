@@ -18,8 +18,8 @@
 
 include:
   - board: xiao_ble
-    # shield: zukuma rgbled_adapter 
-    shield: settings_reset
+    shield: zukuma rgbled_adapter 
+    # shield: settings_reset
   # - board: nice_nano_v2
   #   shield: foxyduck
     # shield: altiplano
