@@ -36,7 +36,7 @@
 / { 
     macros {
         numshf: num_shift { compatible = "zmk,behavior-macro"; #binding-cells = <0>; 
-                            bindings = <&macro_press &sl NUM &sk LSHFT >, <&macro_pause_for_release>, <&macro_release &sl NUM &sk LSHFT >; };
+                            bindings = <&macro_press &sk LSHFT &sl 1 >, <&macro_pause_for_release>, <&macro_release &sk LSHFT &sl 1>; };
     };
 
     behaviors {
