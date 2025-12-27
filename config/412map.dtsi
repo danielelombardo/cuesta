@@ -40,8 +40,8 @@
     };
 
     behaviors {
-        sm: sticky_mod      { compatible = "zmk,behavior-hold-tap";  #binding-cells = <2>; flavor = "balanced"; hold-while-undecided; bindings = <&kp>, <&sk>; };
         motg: mo_tog        { compatible = "zmk,behavior-hold-tap";  #binding-cells = <2>; flavor = "balanced"; tapping-term-ms = <200>; bindings = <&mo>, <&tog>; }; 
+//        sm: sticky_mod      { compatible = "zmk,behavior-hold-tap";  #binding-cells = <2>; flavor = "balanced"; hold-while-undecided; bindings = <&kp>, <&sk>; };
 //        blt: bluetoot     { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&bt BT_NXT>, <&bt BT_CLR>; mods = <MOD_RALT>; };
         cps: caps_wrd       { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&caps_word>, <&kp CAPS>; mods = <MOD_LSFT>; };
         pars: parentheses   { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&kp LPAR>, <&kp RPAR>; mods = <(MOD_LSFT|MOD_RSFT)>; };
@@ -55,8 +55,8 @@
             //  1           2           3           4           5           6           7           8           9           10          11          12 
                 &kp Q       &kp W       &kp E       &kp R       &kp T       &kp Z       VOLUP       &kp U       &kp I       &kp O       &kp P       &kp DEL 
                 &kp TAB     &kp A       &kp S       &kp D       &kp F       &kp G       VOLDN       &kp H       &kp J       &kp K       &kp L       &kp BSPC 
-                &kp ESC     &sm LSHFT   &kp Y       &kp X       &kp C       &kp V       &kp B       &kp N       &kp M       &numshf     &sl NAV      &kp ENTER 
-                REP         &sl NAV     &sm LCTRL   &sm LALT    &sm LGUI    &sl NUM     &kp SPACE   &kp LEFT    &kp DOWN    &kp UP      &kp RIGHT   MOU 
+                &kp ESC     &sk LSHFT   &kp Y       &kp X       &kp C       &kp V       &kp B       &kp N       &kp M       &numshf     &sl NAV     &kp ENTER 
+                REP         &sk LCTRL   &sk LGUI    &sk LALT    &sl NAV     &sl NUM     &kp SPACE   &kp LEFT    &kp DOWN    &kp UP      &kp RIGHT   MOU 
             >; 
         };
 
@@ -76,8 +76,8 @@
             bindings = <
             //  1       2           3           4           5           6       7       8               9               10              11              12 
                 &kp F1  &kp F2      &kp F3      &kp F4      &kp F5      &kp F6  &kp F7  &kp F8          &kp F9          &kp F10         &kp F11         &kp F12 
-                ____    xxxx        xxxx        xxxx        xxxx        ____    ____    &msc SCRL_UP    &msc SCRL_DOWN  xxxx            ____            ____ 
-                ____    ____        &mkp RCLK   &mkp MCLK   &mkp LCLK   ____    ____    &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP    &mmv MOVE_RIGHT ____ 
+                ____    xxxx        xxxx        xxxx        xxxx        xxxx    xxxx    &msc SCRL_UP    &msc SCRL_DOWN  xxxx            xxxx            ____ 
+                ____    ____        &mkp RCLK   &mkp MCLK   &mkp LCLK   xxxx    xxxx    &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP    &mmv MOVE_RIGHT ____ 
                 ____    ____        ____        ____        ____        MOU     ____    ____            ____            ____            ____            ____ 
             >; 
 
@@ -86,7 +86,7 @@
             bindings = <
             //  1           2           3           4           5           6           7           8           9           10          11          12 
                 xxxx        &kp PG_UP   &kp HOME    &kp END     &kp PG_DN   xxxx        ____        xxxx        &kp INS     xxxx        &kp PSCRN   ____ 
-                ____        &sm LSHFT   &sm LCTRL   &sm LALT    &sm LGUI    xxxx        ____        &sm RGUI    &sm RALT    &sm RCTRL   &sm RSHFT   ____ 
+                ____        &sk LSHFT   &sk LCTRL   &sk LALT    &sk LGUI    xxxx        ____        &sk RGUI    &sk RALT    &sk RCTRL   &sk RSHFT   ____ 
                 ____        &cps        xxxx        xxxx        &sm LEADR   xxxx        VMUTE       &kp LEFT    &kp DOWN    &kp UP      &kp RIGHT   ____ 
                 ____        ____        ____        ____        ____        ____        ____        ____        ____        ____        ____        ____ 
             >; 
