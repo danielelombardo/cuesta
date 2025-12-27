@@ -80,6 +80,7 @@
                 ____    ____        &mkp RCLK   &mkp MCLK   &mkp LCLK   xxxx    xxxx    &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP    &mmv MOVE_RIGHT ____ 
                 ____    ____        ____        ____        ____        MOU     ____    ____            ____            ____            ____            ____ 
             >; 
+        };
 
         nav {
             display-name = "NAV";
@@ -90,7 +91,6 @@
                 ____        &cps        xxxx        xxxx        &sk LEADR   xxxx        VMUTE       &kp LEFT    &kp DOWN    &kp UP      &kp RIGHT   ____ 
                 ____        ____        ____        ____        ____        ____        ____        ____        ____        ____        ____        ____ 
             >; 
-        };
         }; 
     }; 
 };
