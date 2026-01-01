@@ -48,6 +48,7 @@
 //        sm: sticky_mod      { compatible = "zmk,behavior-hold-tap";  #binding-cells = <2>; flavor = "balanced"; hold-while-undecided; bindings = <&kp>, <&sk>; };
 //        blt: bluetoot     { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&bt BT_NXT>, <&bt BT_CLR>; mods = <MOD_RALT>; };
         pars: parentheses   { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&kp LPAR>, <&kp RPAR>; mods = <(MOD_LSFT|MOD_RSFT)>; };
+        repc: repeat_cancel { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&key_repeat>, <&kp K_CANCEL>; mods = <(MOD_LSFT|MOD_RSFT|MOD_LCTL|MOD_RCTL|MOD_LALT|MOD_RALT|MOD_LGUI|MOD_RGUI)>; };
     };
   
     keymap {
@@ -59,7 +60,7 @@
                 &kp Q       &kp W       &kp E       &kp R       &kp T       &kp Z       VOLUP       &kp U       &kp I       &kp O       &kp P       &kp DEL 
                 &kp TAB     &kp A       &kp S       &kp D       &kp F       &kp G       VOLDN       &kp H       &kp J       &kp K       &kp L       &kp BSPC 
                 &kp ESC     &sk LSHFT   &kp Y       &kp X       &kp C       &kp V       &kp B       &kp N       &kp M       &numshf     &sl NAV     &kp ENTER 
-                REP         &sk LCTRL   &sk LGUI    &sk LALT    &sl NAV     &sl NUM     &kp SPACE   &kp LEFT    &kp DOWN    &kp UP      &kp RIGHT   &sl MOU 
+                &repc       &sk LCTRL   &sk LGUI    &sk LALT    &sl NAV     &sl NUM     &kp SPACE   &kp LEFT    &kp DOWN    &kp UP      &kp RIGHT   &sl MOU 
             >; 
         };
 
@@ -89,7 +90,7 @@
             display-name = "NAV";
             bindings = <
             //  1           2           3           4           5           6           7           8           9           10          11          12 
-                xxxx        &kp PG_UP   &kp HOME    &kp END     &kp PG_DN   xxxx        ____        xxxx        &kp INS     xxxx        &kp PSCRN   ____ 
+                xxxx        &kp PG_UP   &kp HOME    &kp END     &kp PG_DN   xxxx        ____        xxxx        &kp INS     REP         &kp PSCRN   ____ 
                 ____        &sk LSHFT   &sk LCTRL   &sk LGUI    &sk LALT    xxxx        ____        &sk RALT    &sk RGUI    &sk RCTRL   &sk RSHFT   ____ 
                 ____        &capwrd     &kp CAPS    xxxx        &sk LEADR   xxxx        VMUTE       &kp LEFT    &kp DOWN    &kp UP      &kp RIGHT   ____ 
                 ____        ____        ____        ____        ____        &ltg NAV    ____        ____        ____        ____        ____        ____ 
