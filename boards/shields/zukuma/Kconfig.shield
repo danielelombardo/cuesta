@@ -1,2 +1,4 @@
 config SHIELD_ZUKUMA
 	def_bool $(shields_list_contains,zukuma)
+config SHIELD_ZUKUMA_DONGLE
+	def_bool $(shields_list_contains,zukuma_dongle)

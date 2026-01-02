@@ -1,12 +1,25 @@
-if SHIELD_ZUKUMA
+if SHIELD_ZUKUMA_DONGLE
 
 config ZMK_KEYBOARD_NAME
 	default "zukuma"
 
+config ZMK_SPLIT_ROLE_CENTRAL
+	default y
+
 config ZMK_USB
+    default y
+
+endif
+
+if SHIELD_ZUKUMA || SHIELD_ZUKUMA_DONGLE
+    
+config ZMK_SPLIT
     default y
 
 config ZMK_POINTING
     default y
     
+config ZMK_SLEEP
+    default y
+
 endif
