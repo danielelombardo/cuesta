@@ -2,15 +2,20 @@ manifest:
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
-    - name: caksoylar  # <-- new entry
+    - name: caksoylar  # <-- RGB LED
       url-base: https://github.com/caksoylar
+    - name: kbrd-space  # <-- mouse wiggler
+      url-base: https://github.com/kbrd-space
   projects:
     - name: zmk
       remote: zmkfirmware
       revision: main  # v0.3-branch  # <-- stable branch
       import: app/west.yml
-    - name: zmk-rgbled-widget  # <-- new entry
+    - name: zmk-rgbled-widget  # <-- RGB LED 
       remote: caksoylar
+      revision: main
+    - name: zmk-anti-idle # <-- mouse wiggler
+      remote: kbrd-space
       revision: main
   self:
     path: config
