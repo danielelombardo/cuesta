@@ -43,7 +43,6 @@
         capwrd: capsword  { compatible = "zmk,behavior-macro"; wait-ms = <0>; tap-ms = <1>; #binding-cells = <0>;
                             bindings = <&macro_tap &kp K_CANCEL &caps_word>; };
     };
-#include <dt-bindings/zmk/behaviors.h>
 
     behaviors {
         sm: stick_mod       { compatible = "zmk,behavior-sticky-key"; #binding-cells = <1>; bindings = <&kp>; release-after-ms = <2000>; quick-release; };
