@@ -46,7 +46,7 @@
 
     behaviors {
         sm: stick_mod       { compatible = "zmk,behavior-sticky-key"; #binding-cells = <1>; bindings = <&kp>; release-after-ms = <2000>; quick-release; };
-        hsk: holdstickymod  { compatible = "zmk,behavior-hold-tap";   #binding-cells = <2>; flavor = "balanced"; hold-while-undecided; bindings = <&kp>, <&sm>; }; 
+        hsk: holdstickymod  { compatible = "zmk,behavior-hold-tap";   #binding-cells = <2>; flavor = "balanced"; tapping-term-ms = <200>; hold-while-undecided; bindings = <&kp>, <&sm>; }; 
         motg: mo_tog        { compatible = "zmk,behavior-hold-tap";   #binding-cells = <2>; flavor = "balanced"; tapping-term-ms = <200>; bindings = <&mo>, <&tog>; }; 
 //        blt: bluetoot     { compatible = "zmk,behavior-mod-morph";  #binding-cells = <0>; bindings = <&bt BT_NXT>, <&bt BT_CLR>; mods = <MOD_RALT>; };
         pars: parentheses   { compatible = "zmk,behavior-mod-morph";  #binding-cells = <0>; bindings = <&kp LPAR>, <&kp RPAR>; mods = <(MOD_LSFT|MOD_RSFT)>; };
