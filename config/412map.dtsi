@@ -5,9 +5,7 @@
 #include <dt-bindings/anti_idle_mode.h>
 
 &caps_word { continue-list = <MINUS UNDERSCORE BSPC DEL LEFT RIGHT DOT COMMA SEMI SLASH>; };
-&sk { release-after-ms = <2000>; quick-release; }; // lazy; /delete-property/ ignore-modifiers;
 &sl { release-after-ms = <1000>; };
-
 
 #define xxxx &none
 #define ____ &trans
@@ -47,13 +45,13 @@
     };
 #include <dt-bindings/zmk/behaviors.h>
 
-
     behaviors {
-        motg: mo_tog        { compatible = "zmk,behavior-hold-tap";  #binding-cells = <2>; flavor = "balanced"; tapping-term-ms = <200>; bindings = <&mo>, <&tog>; }; 
-        hsk: holdstickymod  { compatible = "zmk,behavior-hold-tap";  #binding-cells = <2>; flavor = "balanced"; hold-while-undecided; bindings = <&kp>, <&sk>; display-name = "Sticky-Mod"; };
-//        blt: bluetoot     { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&bt BT_NXT>, <&bt BT_CLR>; mods = <MOD_RALT>; };
-        pars: parentheses   { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&kp LPAR>, <&kp RPAR>; mods = <(MOD_LSFT|MOD_RSFT)>; };
-//        repc: repeat_cancel { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&key_repeat>, <&kp K_CANCEL>; mods = <(MOD_LSFT|MOD_RSFT|MOD_LCTL|MOD_RCTL|MOD_LALT|MOD_RALT|MOD_LGUI|MOD_RGUI)>; };
+        sm: stick_mod       { compatible = "zmk,behavior-sticky-key"; #binding-cells = <1>; bindings = <&kp>; release-after-ms = <2000>; quick-release; };
+        hsk: holdstickymod  { compatible = "zmk,behavior-hold-tap";   #binding-cells = <2>; flavor = "balanced"; hold-while-undecided; bindings = <&kp>, <&sm>; }; 
+        motg: mo_tog        { compatible = "zmk,behavior-hold-tap";   #binding-cells = <2>; flavor = "balanced"; tapping-term-ms = <200>; bindings = <&mo>, <&tog>; }; 
+//        blt: bluetoot     { compatible = "zmk,behavior-mod-morph";  #binding-cells = <0>; bindings = <&bt BT_NXT>, <&bt BT_CLR>; mods = <MOD_RALT>; };
+        pars: parentheses   { compatible = "zmk,behavior-mod-morph";  #binding-cells = <0>; bindings = <&kp LPAR>, <&kp RPAR>; mods = <(MOD_LSFT|MOD_RSFT)>; };
+//        repc: repeat_cancel { compatible = "zmk,behavior-mod-morph";  #binding-cells = <0>; bindings = <&key_repeat>, <&kp K_CANCEL>; mods = <(MOD_LSFT|MOD_RSFT|MOD_LCTL|MOD_RCTL|MOD_LALT|MOD_RALT|MOD_LGUI|MOD_RGUI)>; };
     };
 
     anti_idle {
