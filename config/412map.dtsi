@@ -22,16 +22,16 @@
 #define NAV 3
 #define RST &to 0
 
-#define ZMK_MOUSE_DEFAULT_MOVE_VAL 12000  // 600
-#define ZMK_MOUSE_DEFAULT_SCRL_VAL 12000  // 10
+#define ZMK_MOUSE_DEFAULT_MOVE_VAL 15000  // 600
+#define ZMK_MOUSE_DEFAULT_SCRL_VAL 15000  // 10
 #include <dt-bindings/zmk/pointing.h>
 &mmv {
-  acceleration-exponent = <2>;      // 1
-  time-to-max-speed-ms = <200>;    // 40
+  acceleration-exponent = <1>;      // 1
+  time-to-max-speed-ms = <500>;    // 40
 };
 &msc {
-  acceleration-exponent = <0>;      // 0
-  time-to-max-speed-ms = <200>;   // 500
+  acceleration-exponent = <1>;      // 0
+  time-to-max-speed-ms = <500>;   // 500
 };
 
 / { 
@@ -57,7 +57,7 @@
         compatible = "zmk,anti-idle-generic";
         interval-ms = <60000>; // How often to send actions (ms)
         bindings = <&mmv MOVE_DOWN &mmv MOVE_LEFT &mmv MOVE_UP &mmv MOVE_RIGHT>; // Actions to perform (e.g., mouse move)
-        tap_ms = <200>;  // Duration of each action (ms)
+        tap_ms = <1000>;  // Duration of each action (ms)
         wait_ms = <200>; // Delay between actions (ms)
     };
 
