@@ -6,6 +6,8 @@ manifest:
       url-base: https://github.com/caksoylar
     - name: kbrd-space  # <-- mouse wiggler
       url-base: https://github.com/kbrd-space
+    - name: danielelombardo  # <-- dongle display
+      url-base: https://github.com/danielelombardo
   projects:
     - name: zmk
       remote: zmkfirmware
@@ -16,6 +18,9 @@ manifest:
       revision: main
     - name: zmk-anti-idle # <-- mouse wiggler
       remote: kbrd-space
+      revision: main
+    - name: zmk-dongle-display # <-- dongle display
+      remote: danielelombardo
       revision: main
   self:
     path: config
