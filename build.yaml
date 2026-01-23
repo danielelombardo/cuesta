@@ -18,7 +18,7 @@
 
 include:
   - board: xiao_ble
-    shield: zukuma_dongle rgbled_adapter 
+    shield: zukuma_dongle dongle_display #rgbled_adapter 
   # - board: xiao_ble
   #   shield: zukuma
   #   shield: settings_reset
