@@ -89,7 +89,7 @@
             display-name = "/12";
             bindings = <
             //  1           2           3           4           5           6           7           8           9           10          11          12 
-                xxxx        &kp GRAVE   &kp N1      &kp N2      &kp N3      xxxx        ____        &kp LBKT    &kp RBKT    &kp BSLH    ____ 
+                xxxx        &kp GRAVE   &kp N1      &kp N2      &kp N3      xxxx        ____        &kp LBKT    &kp RBKT    &kp BSLH    ____        ____ 
                 ____        &kp N0      &kp N4      &kp N5      &kp N6      xxxx        ____        &kp SEMI    &kp SQT     &kp MINUS   &kp EQUAL   ____ 
                 ____        ____        &kp N7      &kp N8      &kp N9      xxxx        VMUTE       &kp COMMA   &kp DOT     &kp SLASH   ____        ____ 
                 ____        ____        ____        ____        ____        &ltg NUM    ____        ____        ____        ____        ____        ____ 
