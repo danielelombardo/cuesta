@@ -17,7 +17,7 @@
 #define VOLUP &kp C_VOL_UP
 #define VMUTE &kp C_MUTE
 
-#define MOf 1
+#define FUM 1
 #define NUM 2
 #define CTR 3
 #define RST &to 0
