@@ -11,15 +11,11 @@
 #define ____ &trans
 
 #define hs(l) &hsk l l 
+#define mg(l) &mtg l l 
 #define LEADR LG(LS(LA(LCTRL)))
-
-#define VOLDN &kp C_VOL_DN
-#define VOLUP &kp C_VOL_UP
-#define VMUTE &kp C_MUTE
 
 #define FUM 1
 #define NUM 2
-#define CTR 3
 #define RST &to 0
 
 #define ZMK_MOUSE_DEFAULT_MOVE_VAL 15000  // 600
@@ -48,11 +44,14 @@
 
     behaviors {
         sm: stick_mod       { compatible = "zmk,behavior-sticky-key"; #binding-cells = <1>; bindings = <&kp>; release-after-ms = <2000>; quick-release; ignore-modifiers; };
-        hsk: holdstickymod  { compatible = "zmk,behavior-hold-tap";   #binding-cells = <2>; flavor = "balanced"; tapping-term-ms = <200>; bindings = <&kp>, <&sm>; }; 
+        hsk: holdstickymod  { compatible = "zmk,behavior-hold-tap";   #binding-cells = <2>; flavor = "balanced"; hold-while-undecided; tapping-term-ms = <200>; bindings = <&kp>, <&sm>; }; 
+        mtg: mo_tog         { compatible = "zmk,behavior-hold-tap";   #binding-cells = <2>; flavor = "balanced"; tapping-term-ms = <200>; bindings = <&mo>, <&tog>; }; 
 //        symi: symtap        { compatible = "zmk,behavior-hold-tap";   #binding-cells = <2>; flavor = "balanced"; tapping-term-ms = <200>; bindings = <&numshf>, <&sl>; }; 
-        motg: mo_tog        { compatible = "zmk,behavior-hold-tap";   #binding-cells = <2>; flavor = "balanced"; tapping-term-ms = <200>; bindings = <&mo>, <&tog>; }; 
 //        blt: bluetoot     { compatible = "zmk,behavior-mod-morph";  #binding-cells = <0>; bindings = <&bt BT_NXT>, <&bt BT_CLR>; mods = <MOD_RALT>; };
 //        pars: parentheses   { compatible = "zmk,behavior-mod-morph";  #binding-cells = <0>; bindings = <&kp LPAR>, <&kp RPAR>; mods = <(MOD_LSFT|MOD_RSFT)>; };
+        vold: volume_dw_mu   { compatible = "zmk,behavior-mod-morph";  #binding-cells = <0>; bindings = <&kp C_VOL_DN>, <&kp C_MUTE>; mods = <(MOD_LSFT|MOD_RSFT)>; };
+        volu: volume_up_prsc { compatible = "zmk,behavior-mod-morph";  #binding-cells = <0>; bindings = <&kp C_VOL_UP>, <&kp PSCRN>; mods = <(MOD_LSFT|MOD_RSFT)>; };
+        capw: cw_capsword   { compatible = "zmk,behavior-mod-morph";  #binding-cells = <0>; bindings = <&capwrd>, <&kp CAPS>; mods = <(MOD_LSFT|MOD_RSFT)>; };
     };
 
     anti_idle {
@@ -70,20 +69,20 @@
             bindings = <
             //  1           2           3           4           5           6           7           8           9           10          11          12 
                 &kp Q       &kp W       &kp E       &kp R       &kp T       &kp Z       VOLUP       &kp U       &kp I       &kp O       &kp P       &kp DEL 
-                &kp TAB     &kp A       &kp S       &kp D       &kp F       &kp G       VOLDN       &kp H       &kp J       &kp K       &kp L       &kp BSPC 
-                &kp ESC     hs(LSHFT)   &kp Y       &kp X       &kp C       &kp V       &kp B       &kp N       &kp M       &capwrd     &numshf     &kp ENTER 
-                hs(LEADR)   hs(LCTRL)   hs(LGUI)    hs(LALT)    &sl CTR     &sl NUM     &kp SPACE   &sl CTR     &kp LEFT    &kp DOWN    &kp UP      &kp RIGHT   
+                &kp TAB     &kp A       &kp S       &kp D       &kp F       &kp G       &vold       &kp H       &kp J       &kp K       &kp L       &kp BSPC 
+                &kp ESC     hs(LSHFT)   &kp Y       &kp X       &kp C       &kp V       &kp B       &kp N       &kp M       hs(RCTRL)   hs(RSHFT)   &kp ENTER 
+                hs(LCTRL)   &capw       hs(LEADR)   hs(RALT)    hs(LGUI)    &sl NUM     &kp SPACE   mg(FUM)     &kp LEFT    &kp DOWN    &kp UP      &kp RIGHT   
             >; 
         };
 
         fum {
-            display-name = "fuM";
+            display-name = "f->";
             bindings = <
-            //  1           2           3           4           5           6           7           8           9           10              11      12 
-                &kp F1      &kp F2      &kp F3      &kp F4      &kp F5      &kp F6      &kp F7      &kp F8      &kp F9      &kp F10         &kp F11 &kp F12 
-                ____        &mkp MB5    &mkp MB3    &mkp MB2    &mkp MB1    xxxx        ____        ____     &msc SCRL_UP   &mmv MOVE_UP    &msc SCRL_DOWN  ____ 
-                ____        ____        xxxx        xxxx        &mkp MB4    xxxx        ____        ____     &mmv MOVE_LEFT &mmv MOVE_DOWN  &mmv MOVE_RIGHT ____ 
-                ____        ____        ____        ____        ____        RST         ____        &ltg FUM    ____        ____            ____    ____ 
+            //  1           2           3               4               5               6            7           8           9          10       11       12 
+                &kp F12     &kp F1      &kp F2          &kp F3          &kp F4          &kp F5       &kp F6      &kp F7      &kp F8     &kp F9   &kp F10  &kp F11  
+                ____     &mmv MOVE_LEFT &mmv MOVE_DOWN  &mmv MOVE_UP    &mmv MOVE_RIGHT &aim AIM_OFF &aim AIM_ON &mkp MB1    &mkp MB2   &mkp MB4 &mkp MB5 ____ 
+                ____        ____        ____            &msc SCRL_UP    &msc SCRL_DOWN  xxxx         xxxx        &key_repeat &mkp MB3   ____     ____     ____ 
+                ____        ____        ____            ____            ____            ____         ____        ____        ____       ____     ____     ____ 
             >; 
         };
 
@@ -91,22 +90,12 @@
             display-name = "/12";
             bindings = <
             //  1           2           3           4           5           6           7           8           9           10          11          12 
-                xxxx        &kp GRAVE   &kp N1      &kp N2      &kp N3      xxxx        ____        &kp LBKT    &kp RBKT    &kp BSLH    ____        ____ 
-                ____        &kp N0      &kp N4      &kp N5      &kp N6      xxxx        ____        &kp SEMI    &kp SQT     &kp MINUS   &kp EQUAL   ____ 
-                ____        ____        &kp N7      &kp N8      &kp N9      xxxx        VMUTE       &kp COMMA   &kp DOT     &kp SLASH   ____        ____ 
+                &kp GRAVE   &kp N1      &kp N2      &kp N3      &kp N4      &kp N5      &kp N6      &kp N7      &kp N8      &kp N9      &kp N0      ____ 
+                ____        &kp LBKT    &kp RBKT    &kp MINUS   &kp EQUAL   &kp BSLH    &kp SEMI    &kp COMMA   &kp DOT     &kp SQT     &kp SLASH   ____ 
+                ____        ____        hs(LCTRL)  &kp K_CANCEL &kp HOME    &kp PG_UP   &kp PG_DN   &kp END     &kp INS     ____        ____        ____ 
                 ____        ____        ____        ____        ____        &ltg NUM    ____        ____        ____        ____        ____        ____ 
             >; 
         };
 
-        ctr {
-            display-name = "=>";
-            bindings = <
-            //  1           2           3           4           5           6           7           8           9           10          11          12 
-                xxxx        &kp CAPS    &funmou     &key_repeat xxxx        xxxx       &aim AIM_ON  xxxx        &kp INS     hs(LEADR)   &kp PSCRN   ____ 
-                ____        hs(LCTRL)   hs(LGUI)    hs(LALT)    hs(LSHFT)   xxxx       &aim AIM_OFF hs(RSHFT)   hs(RALT)    hs(RGUI)    hs(RCTRL)   ____ 
-                ____        &kp LEFT    &kp DOWN    &kp UP      &kp RIGHT   xxxx        xxxx        &kp HOME    &kp PG_UP   &kp PG_DN   &kp END     ____
-                ____        ____        ____        ____        &ltg CTR    RST        &kp K_CANCEL &ltg FUM    ____        ____        ____        ____ 
-            >; 
-        };
     }; 
 };
