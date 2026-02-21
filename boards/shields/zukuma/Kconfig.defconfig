@@ -15,7 +15,7 @@ endif
 
 if SHIELD_ZUKUMA || SHIELD_ZUKUMA_DONGLE
 
-config ZMK_SPLIT_BLE
+config ZMK_SPLIT
     default y
 
 config ZMK_POINTING
