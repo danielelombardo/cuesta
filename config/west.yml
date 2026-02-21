@@ -4,8 +4,8 @@ manifest:
       url-base: https://github.com/zmkfirmware
     - name: caksoylar  # <-- RGB LED
       url-base: https://github.com/caksoylar
-    - name: kbrd-space  # <-- mouse wiggler
-      url-base: https://github.com/kbrd-space
+    - name: danielelombardo  # <-- mouse wiggler
+      url-base: https://github.com/danielelombardo
     - name: danielelombardo  # <-- dongle display
       url-base: https://github.com/danielelombardo
   projects:
@@ -17,7 +17,7 @@ manifest:
       remote: caksoylar
       revision: main
     - name: zmk-anti-idle # <-- mouse wiggler
-      remote: kbrd-space
+      remote: danielelombardo
       revision: main
     - name: zmk-dongle-display # <-- dongle display
       remote: danielelombardo

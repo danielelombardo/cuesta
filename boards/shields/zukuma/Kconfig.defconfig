@@ -16,6 +16,9 @@ if SHIELD_ZUKUMA || SHIELD_ZUKUMA_DONGLE
 config ZMK_SPLIT
     default y
 
+config ZMK_SPLIT_BLE
+    default y
+
 config ZMK_POINTING
     default y
     
