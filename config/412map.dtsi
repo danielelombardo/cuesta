@@ -71,7 +71,7 @@
                 &kp Q       &kp W       &kp E       &kp R       &kp T       &kp Z       &volu       &kp U       &kp I       &kp O       &kp P       &kp DEL 
                 &kp TAB     &kp A       &kp S       &kp D       &kp F       &kp G       &vold       &kp H       &kp J       &kp K       &kp L       &kp BSPC 
                 &kp ESC     hs(LSHFT)   &kp Y       &kp X       &kp C       &kp V       &kp B       &kp N       &kp M       hs(RCTRL)   hs(RSHFT)   &kp ENTER 
-                hs(LCTRL)   &capw       hs(LEADR)   hs(RALT)    hs(LGUI)    &sl NUM     &kp SPACE   mg(FUM)     &kp LEFT    &kp DOWN    &kp UP      &kp RIGHT   
+                hs(LCTRL)  &kp K_CANCEL hs(LEADR)   hs(RALT)    hs(LGUI)    &sl NUM     &kp SPACE   mg(FUM)     &kp LEFT    &kp DOWN    &kp UP      &kp RIGHT   
             >; 
         };
 
@@ -92,7 +92,7 @@
             //  1           2           3           4           5           6           7           8           9           10          11          12 
                 &kp GRAVE   &kp N1      &kp N2      &kp N3      &kp N4      &kp N5      &kp N6      &kp N7      &kp N8      &kp N9      &kp N0      ____ 
                 ____        &kp LBKT    &kp RBKT    &kp MINUS   &kp EQUAL   &kp BSLH    &kp SEMI    &kp COMMA   &kp DOT     &kp SQT     &kp SLASH   ____ 
-                ____        ____        hs(LCTRL)  &kp K_CANCEL &kp HOME    &kp PG_UP   &kp PG_DN   &kp END     &kp INS     ____        ____        ____ 
+                ____        ____        hs(LCTRL)   &kp INS     &kp HOME    &kp PG_UP   &kp PG_DN   &kp END     &capw       ____        ____        ____ 
                 ____        ____        ____        ____        ____        &ltg NUM    ____        ____        ____        ____        ____        ____ 
             >; 
         };
