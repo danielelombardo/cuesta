@@ -36,8 +36,8 @@
                             bindings = <&macro_tap &kp K_CANCEL>, <&macro_param_1to1>, <&macro_tap &tog MACRO_PLACEHOLDER>; };
         capwrd: capsword  { compatible = "zmk,behavior-macro"; wait-ms = <0>; tap-ms = <1>; #binding-cells = <0>;
                             bindings = <&macro_tap &to 0 &caps_word>; };
-        rp: reset_kp      { compatible = "zmk,behavior-macro-one-param"; wait-ms = <0>; tap-ms = <1>; #binding-cells = <1>;
-                            bindings = <&macro_param_1to1>, <&macro_tap &to 0 &kp MACRO_PLACEHOLDER>; };
+        rp: reset_kp      { compatible = "zmk,behavior-macro-one-param"; wait-ms = <0>; tap-ms = <0>; #binding-cells = <1>;
+                            bindings = <&macro_tap &to 0>, <&macro_param_1to1>, <&macro_tap &kp MACRO_PLACEHOLDER>; };
     };
 
     behaviors {
