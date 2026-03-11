@@ -49,8 +49,8 @@
 //        symi: symtap        { compatible = "zmk,behavior-hold-tap";   #binding-cells = <2>; flavor = "balanced"; tapping-term-ms = <200>; bindings = <&numshf>, <&sl>; }; 
 //        blt: bluetoot     { compatible = "zmk,behavior-mod-morph";  #binding-cells = <0>; bindings = <&bt BT_NXT>, <&bt BT_CLR>; mods = <MOD_RALT>; };
 //        pars: parentheses   { compatible = "zmk,behavior-mod-morph";  #binding-cells = <0>; bindings = <&kp LPAR>, <&kp RPAR>; mods = <(MOD_LSFT|MOD_RSFT)>; };
-        vold: volume_dw_mute { compatible = "zmk,behavior-mod-morph";  #binding-cells = <0>; bindings = <&kp C_VOL_DN>, <&kp C_MUTE>; mods = <MOD_RALT>; };
-        volu: volume_up_rept { compatible = "zmk,behavior-mod-morph";  #binding-cells = <0>; bindings = <&kp C_VOL_UP>, <&key_repeat>; mods = <MOD_RALT>; };
+        vold: volume_dw_mute { compatible = "zmk,behavior-mod-morph";  #binding-cells = <0>; bindings = <&kp C_VOL_DN>, <&kp C_MUTE>; mods = <(MOD_LALT|MOD_RALT)>; };
+        volu: volume_up_rept { compatible = "zmk,behavior-mod-morph";  #binding-cells = <0>; bindings = <&kp C_VOL_UP>, <&key_repeat>; mods = <(MOD_LALT|MOD_RALT)>; };
 //        capw: cw_capsword   { compatible = "zmk,behavior-mod-morph";  #binding-cells = <0>; bindings = <&capwrd>, <&kp CAPS>; mods = <(MOD_LSFT|MOD_RSFT)>; };
     };
 
