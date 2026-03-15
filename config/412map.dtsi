@@ -82,7 +82,7 @@
                 ____        &kp F1      &kp F2      &kp F3      &kp F4      &kp F5      &kp F6      &kp F7      &kp F8      &kp F9      &kp F10     ____ 
                 ____        &kp F11     &kp F12     &mkp MB3    &mkp MB2    &mkp MB1    xxxx  &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_UP &mmv MOVE_RIGHT  ____ 
                 ____        ____        ____        ____       &aim AIM_OFF &aim AIM_ON xxxx  &msc SCRL_UP &msc SCRL_DOWN   xxxx        ____        ____ 
-                ____        &mkp MB4    &mkp MB5    ____        ____        ____        &key_repeat ____        ____        ____        ____        ____ 
+                &key_repeat &mkp MB4    &mkp MB5    ____        ____        ____        ____        ____        ____        ____        ____        ____ 
             >; 
         };
 
