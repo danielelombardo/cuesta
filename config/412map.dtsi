@@ -5,7 +5,7 @@
 #include <dt-bindings/anti_idle_mode.h>
 
 &caps_word { continue-list = <MINUS UNDERSCORE BSPC DEL LEFT RIGHT DOT COMMA SEMI SLASH>; };
-&sl { release-after-ms = <800>; };
+&sl { release-after-ms = <800>;  /delete-property/ quick-release; };
 
 #define xxxx &none
 #define ____ &trans
@@ -68,7 +68,7 @@
             display-name = "ABC";
             bindings = <
             //  1           2           3           4           5           6           7           8           9           10          11          12 
-                &mtg FM FM  &kp Q       &kp W       &kp E       &kp R       &kp T       &kp Y       &kp U       &kp I       &kp O       &kp P       &kp BSPC    
+                &sl FM      &kp Q       &kp W       &kp E       &kp R       &kp T       &kp Y       &kp U       &kp I       &kp O       &kp P       &kp BSPC    
                 &kp ESC     &kp TAB     &kp A       &kp S       &kp D       &kp F       &kp G       &kp H       &kp J       &kp K       &kp L       &kp ENTER   
                 &kp DEL     &kp CAPS    hs(LCTRL)   &kp Z       &kp X       &kp C       &kp V       &kp B       &kp N       &kp M       hs(RCTRL)   &key_repeat 
                 &kp C_MUTE  &vold       &volu       hs(RALT)    &sl NU      hs(LSHFT)   hs(LGUI)    &kp SPACE   &kp LEFT    &kp DOWN    &kp UP      &kp RIGHT 
@@ -79,7 +79,7 @@
             display-name = "f->";
             bindings = <
             //  1           2           3           4           5           6           7           8           9           10          11          12 
-                ____        &kp F1      &kp F2      &kp F3      &kp F4      &kp F5      &kp F6      &kp F7      &kp F8      &kp F9      &kp F10     ____ 
+                &ltg FM     &kp F1      &kp F2      &kp F3      &kp F4      &kp F5      &kp F6      &kp F7      &kp F8      &kp F9      &kp F10     ____ 
                 ____        &kp F11     &kp F12     &mkp MB3    &mkp MB2    &mkp MB1    xxxx  &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_UP &mmv MOVE_RIGHT  ____ 
                 ____        ____        ____        ____       &aim AIM_OFF &aim AIM_ON xxxx  &msc SCRL_UP &msc SCRL_DOWN   xxxx        ____        ____ 
                 ____        &mkp MB4    &mkp MB5    ____        ____        ____        ____        ____        ____        ____        ____        ____ 
@@ -91,8 +91,8 @@
             bindings = <
             //  1           2           3           4           5           6           7           8           9           10          11          12 
                 &ltg NU     &kp N1      &kp N2      &kp N3      &kp N4      &kp N5      &kp N6      &kp N7      &kp N8      &kp N9      &kp N0      ____ 
-                ____        ____        &kp LBKT    &kp RBKT    &kp EQUAL   &kp MINUS   &kp PSCRN   &kp COMMA   &kp DOT     &kp SQT     &kp SLASH   ____ 
-                ____        &capwrd     ____        &kp INS     &kp HOME    &kp END     xxxx        &kp GRAVE   &kp SEMI    &kp BSLH    ____        ____        
+                ____        ____        &kp GRAVE   &kp LBKT    &kp RBKT    &kp BSLH    &kp PSCRN   &kp COMMA   &kp DOT     &kp SQT     &kp SLASH   ____ 
+                ____        &capwrd     ____        &kp INS     &kp HOME    &kp END     xxxx        &kp MINUS   &kp EQUAL   &kp SEMI    ____        ____        
                 ____        &kp PG_DN   &kp PG_UP   ____        ____        ____        ____        hs(RSHFT)   ____        ____        ____        ____ 
             >; 
         };
