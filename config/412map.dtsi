@@ -82,8 +82,7 @@
                 ____        &kp F1      &kp F2      &kp F3      &kp F4      &kp F5      &kp F6      &kp F7      &kp F8      &kp F9      &kp F10     ____ 
                 ____        &kp INS     &kp PG_UP   &kp PG_DN   &kp F11     &kp F12    &msc SCRL_UP &kp LEFT    &kp DOWN    &kp UP      &kp RIGHT   ____ 
                 ____        ____        ____        &mkp MB3    &mkp MB2    &mkp MB1   &msc SCRL_DOWN xxxx      &kp HOME    &kp END     ____        ____ 
-                &aim AIM_ TOG ____      ____        ____        &ltg FM     ____        ____        hs(RSHFT) &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_UP &mmv MOVE_RIGHT 
-                
+                &aim AIM_TOG ____       ____        ____        &ltg FM     ____        ____        hs(RSHFT) &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_UP &mmv MOVE_RIGHT 
             >; 
         };
 
