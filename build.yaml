@@ -19,7 +19,7 @@
 include:
   - board: xiao_ble//zmk
     shield: laut_dongle rgbled_adapter
-  #   shield: zukuma_dongle rgbled_adapter #dongle_display 
+    shield: zukuma_dongle rgbled_adapter #dongle_display 
   #   shield: zukuma
   #   shield: settings_reset
   # - board: nice_nano//zmk
