@@ -93,8 +93,8 @@
             bindings = < 
             //  1           2           3           4           5           6           7           8           9           10          11          12 
                 &kp GRAVE   &kp N1      &kp N2      &kp N3      &kp N4      &kp N5      &kp N6      &kp N7      &kp N8      &kp N9      &kp N0      ____ 
-                ____        ____        &kp SLASH   &kp SQT     &kp DOT     &kp COMMA   xxxx        &kp SEMI    &kp MINUS   &kp EQUAL   &kp BSLH    ____ 
-                ____        ____        ____        &capwrd     &kp LBKT    &kp RBKT    xxxx        xxxx        xxxx        xxxx        ____        ____        
+                ____        ____        &kp SLASH   &kp COMMA   &kp DOT     &kp SQT     xxxx        &kp MINUS   &kp EQUAL   &kp LBKT    &kp RBKT    ____ 
+                ____        ____        ____        &capwrd     &kp BSLH    &kp SEMI    xxxx        xxxx        xxxx        xxxx        ____        ____        
                 ____        ____        ____        ____        ____        ____        ____        &rp SPACE   &ltg NU     ____        ____        ____  
             >; 
         };
