@@ -27,8 +27,8 @@ include:
   #   shield: settings_reset
   # - board: nice_nano//zmk
   #   shield: foxyduck
-  - board: nice_nano//zmk
-    shield: brut 
+  # - board: nice_nano//zmk
+  #   shield: brut 
   #   shield: laut
   #   shield: altiplano
   #   shield: sosuke
