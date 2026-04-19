@@ -1,0 +1,4 @@
+config SHIELD_BRUT
+	def_bool $(shields_list_contains,brut)
+config SHIELD_BRUT_DONGLE
+	def_bool $(shields_list_contains,brut_dongle)
