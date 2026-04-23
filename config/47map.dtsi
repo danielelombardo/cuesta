@@ -45,7 +45,7 @@
     behaviors {
         sm: stick_mod       { compatible = "zmk,behavior-sticky-key"; #binding-cells = <1>; bindings = <&kp>; release-after-ms = <2000>; quick-release; ignore-modifiers; };
         hsk: holdstickymod  { compatible = "zmk,behavior-hold-tap";   #binding-cells = <2>; flavor = "balanced";        tapping-term-ms = <200>; bindings = <&kp>, <&sm>; }; 
-        lkp: molayer_kp     { compatible = "zmk,behavior-hold-tap";   #binding-cells = <2>; flavor = "tap-preferred";   tapping-term-ms = <400>; bindings = <&mo>, <&kp>; }; 
+        lkp: molayer_kp     { compatible = "zmk,behavior-hold-tap";   #binding-cells = <2>; flavor = "balanced";        tapping-term-ms = <400>; bindings = <&mo>, <&kp>; }; 
         mtg: mo_tog         { compatible = "zmk,behavior-hold-tap";   #binding-cells = <2>; flavor = "hold-preferred";  tapping-term-ms = <400>; bindings = <&mo>, <&tog>; }; 
 //        sms: sl_moshft      { compatible = "zmk,behavior-hold-tap";   #binding-cells = <2>; flavor = "balanced"; tapping-term-ms = <200>; bindings = <&layshf>, <&sl>; }; 
 //        cw: kp_capwrd       { compatible = "zmk,behavior-hold-tap";   #binding-cells = <2>; flavor = "balanced"; tapping-term-ms = <200>; bindings = <&kp>, <&capwrd>; };
