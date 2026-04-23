@@ -93,9 +93,9 @@
             display-name = "/12";
             bindings = < 
             //  1           2           3           4           5           6           7           8           9           10          11          12 
-                &kp GRAVE   &kp N1      &kp N2      &kp N3      &kp N4      &kp N5      &kp N6      &kp N7      &kp N8      &kp N9      &kp N0      ____ 
-                ____        ____        &kp BSLH    &kp MINUS   &kp EQUAL   &kp SEMI    xxxx        &kp COMMA   &kp DOT     &kp SQT     &kp SLASH   ____ 
-                ____        ____        ____        xxxx        xxxx        &capwrd     xxxx        &kp LBKT    &kp RBKT    xxxx        xxxx        ____ 
+                ____        xxxx        &kp GRAVE   &kp N1      &kp N2      &kp N3      xxxx        &kp SEMI    &kp MINUS   &kp EQUAL   &kp BSLH    ____ 
+                ____        ____        &kp N0      &kp N4      &kp N5      &kp N6      &kp ENTER   &kp COMMA   &kp DOT     &kp SQT     &kp SLASH   ____ 
+                ____        ____        ____        &kp N7      &kp N8      &kp N9      xxxx        &kp LBKT    &kp RBKT    &capwrd     ____        ____ 
                 ____        ____        ____        ____        ____        ____        &ltg NU     ____        ____        ____        ____        
             >; 
         };
