@@ -106,7 +106,7 @@
             //  1           2           3           4           5           6           7           8           9           10          11          12 
                 ____        &kp F11     &kp F12     &kp F13     &kp F14     &kp F15     &kp F16     &kp F17     &kp F18     &kp F19     &kp F20     ____ 
                 ____        ____        &mkp MB2    &mkp MB3    &mkp MB1   &aim AIM_TOG xxxx        &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_UP &mmv MOVE_RIGHT ____ 
-                ____        ____        ____        xxxx        xxxx        xxxx        xxxx        &msc SCRL_UP &msc SCRL_DOWN xxxx    ____        ____ 
+                ____        ____        ____        xxxx        xxxx        &bapp       xxxx        &msc SCRL_UP &msc SCRL_DOWN xxxx    ____        ____ 
                 ____        &mkp MB4    &mkp MB5    ____        ____        ____        ____        ____        ____        ____        ____        
             >; 
         };
@@ -115,9 +115,9 @@
             display-name = "f->";
             bindings = <
             //  1           2           3           4           5           6           7           8           9           10          11          12 
-                ____        &kp F1      &kp F2      &kp F3      &kp F4      &kp F5      &kp F6      &kp F7      &kp F8      &kp F9      &kp F10     ____ 
-                ____        ____        &kp PG_UP   &kp HOME    &kp END     &kp PG_DN   &kp INS     &kp LEFT    &kp DOWN    &kp UP      &kp RIGHT   ____ 
-                ____        ____        ____        xxxx        xxxx        xxxx        xxxx        &kp SPACE   xxxx        xxxx        ____        ____ 
+                ____        xxxx        xxxx        &kp F1      &kp F2      &kp F3      &kp INS     &kp PG_UP   &kp HOME    &kp END     &kp PG_DN   ____ 
+                ____        ____        &kp F10     &kp F4      &kp F5      &kp F6      xxxx        &kp LEFT    &kp DOWN    &kp UP      &kp RIGHT   ____ 
+                ____        ____        ____        &kp F7      &kp F8      &kp F9      xxxx        &kp SPACE   xxxx        xxxx        ____        ____ 
                 ____        ____        ____        ____        ____        ____        &ltg FN     ____        ____        ____        ____        
             >; 
         };
