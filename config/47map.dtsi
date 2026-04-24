@@ -65,6 +65,8 @@
         wait_ms = <400>; // Delay between actions (ms)
     };
 
+#include <behaviors/battery_percentage_printer.dtsi>
+
     keymap {
         compatible = "zmk,keymap";
         abc {
