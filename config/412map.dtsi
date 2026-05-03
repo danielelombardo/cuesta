@@ -76,7 +76,7 @@
                 &kp ESC     &kp Q       &kp W       &kp E       &kp R       &kp T       &kp Y       &kp U       &kp I       &kp O       &kp P       &kp BSPC    
                 hs(LALT)    &kp TAB     &kp A       &kp S       &kp D       &kp F       &kp G       &kp H       &kp J       &kp K       &kp L       &kp ENTER   
                 &kp DEL     &kp CAPS    hs(LCTRL)   &kp Z       &kp X       &kp C       &kp V       &kp B       &kp N       &kp M       hs(RCTRL)   hs(RALT) 
-                &kp C_MUTE  &vold       &volu       &mo MU      hs(LGUI)    hs(LSHFT)   &sl NU   &lkp FN SPACE  hs(RGUI)    &tog SW     &key_repeat &kp PSCRN
+                &kp C_MUTE  &vold       &volu       &mo MU      hs(LGUI)    hs(LSHFT)   &mo FN      &lkp NU SPACE hs(RGUI)  &tog SW     &key_repeat &kp PSCRN                 
             >; 
         };
 
@@ -98,7 +98,7 @@
                 ____        xxxx        &kp GRAVE   &kp N1      &kp N2      &kp N3      xxxx        &kp SEMI    &kp MINUS   &kp EQUAL   &kp BSLH    ____ 
                 ____        ____        &kp N0      &kp N4      &kp N5      &kp N6      &kp ENTER   &kp COMMA   &kp DOT     &kp SQT     &kp SLASH   ____ 
                 ____        ____        ____        &kp N7      &kp N8      &kp N9      xxxx        &kp LBKT    &kp RBKT    &capwrd     ____        ____ 
-                ____        ____        ____        ____        ____        ____        &ltg NU     ____        ____        ____        ____        ____ 
+                ____        ____        ____        ____        ____        ____        ____        ____        ____        &ltg NU     ____        ____ 
             >; 
         };
         
@@ -109,7 +109,7 @@
                 ____        &kp F11     &kp F12     &kp F13     &kp F14     &kp F15     &kp F16     &kp F17     &kp F18     &kp F19     &kp F20     ____ 
                 ____        ____        &mkp MB2    &mkp MB1    xxxx        xxxx        xxxx        &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_UP &mmv MOVE_RIGHT ____ 
                 ____        ____        ____        &mkp MB3    xxxx        &bapp       xxxx        &msc SCRL_UP &msc SCRL_DOWN xxxx    ____        ____ 
-                &aim AIM_TOG &mkp MB4   &mkp MB5    ____        ____        ____        ____        ____        ____        ____        ____        ____ 
+                &aim AIM_TOG &mkp MB4   &mkp MB5    ____        ____        ____        ____        ____        ____        &ltg MU     ____        ____ 
             >; 
         };
 
@@ -120,7 +120,7 @@
                 ____        xxxx        xxxx        &kp F1      &kp F2      &kp F3      &kp INS     &kp PG_UP   &kp HOME    &kp END     &kp PG_DN   ____ 
                 ____        ____        &kp F10     &kp F4      &kp F5      &kp F6      xxxx        &kp LEFT    &kp DOWN    &kp UP      &kp RIGHT   ____ 
                 ____        ____        ____        &kp F7      &kp F8      &kp F9      xxxx        &kp SPACE   xxxx        xxxx        ____        ____ 
-                ____        ____        ____        ____        ____        ____        &ltg FN     ____        ____        ____        ____        ____ 
+                ____        ____        ____        ____        ____        ____        ____        ____        ____        &ltg FN     ____        ____ 
             >; 
         };
         

@@ -21,12 +21,12 @@ include:
     # shield: laut_dongle rgbled_adapter
   - board: xiao_ble//zmk
     shield: zukuma_dongle rgbled_adapter
-  - board: xiao_ble//zmk
-    shield: brut_dongle rgbled_adapter
+  # - board: xiao_ble//zmk
+  #   shield: brut_dongle rgbled_adapter
   #   shield: zukuma
   #   shield: settings_reset
-  # - board: nice_nano//zmk
-  #   shield: foxyduck
+  - board: nice_nano//zmk
+    shield: foxyduck
   # - board: nice_nano//zmk
   #   shield: brut 
   #   shield: laut
