@@ -47,6 +47,7 @@
         sm: stick_mod       { compatible = "zmk,behavior-sticky-key"; #binding-cells = <1>; bindings = <&kp>; release-after-ms = <2000>; quick-release; ignore-modifiers; };
         hsk: holdstickymod  { compatible = "zmk,behavior-hold-tap";   #binding-cells = <2>; flavor = "balanced";        tapping-term-ms = <200>; bindings = <&kp>, <&sm>; }; 
         lkp: molayer_kp     { compatible = "zmk,behavior-hold-tap";   #binding-cells = <2>; flavor = "balanced";        tapping-term-ms = <400>; bindings = <&mo>, <&kp>; }; 
+        kkp: holdkp_kp      { compatible = "zmk,behavior-hold-tap";   #binding-cells = <2>; flavor = "balanced";        tapping-term-ms = <400>; bindings = <&kp>, <&kp>; }; 
         mtg: mo_tog         { compatible = "zmk,behavior-hold-tap";   #binding-cells = <2>; flavor = "hold-preferred";  tapping-term-ms = <400>; bindings = <&mo>, <&tog>; }; 
 //        sms: sl_moshft      { compatible = "zmk,behavior-hold-tap";   #binding-cells = <2>; flavor = "balanced"; tapping-term-ms = <200>; bindings = <&layshf>, <&sl>; }; 
 //        cw: kp_capwrd       { compatible = "zmk,behavior-hold-tap";   #binding-cells = <2>; flavor = "balanced"; tapping-term-ms = <200>; bindings = <&kp>, <&capwrd>; };
@@ -76,7 +77,7 @@
                 &kp ESC     &kp Q       &kp W       &kp E       &kp R       &kp T       &kp Y       &kp U       &kp I       &kp O       &kp P       &kp BSPC    
                 hs(LALT)    &kp TAB     &kp A       &kp S       &kp D       &kp F       &kp G       &kp H       &kp J       &kp K       &kp L       &kp ENTER   
                 &kp DEL     &kp CAPS    hs(LCTRL)   &kp Z       &kp X       &kp C       &kp V       &kp B       &kp N       &kp M       hs(RCTRL)   hs(RALT) 
-                &key_repeat &vold       &volu       hs(LGUI)    hs(LSHFT)   &mo MU      &mo FN      &lkp NU SPACE hs(RGUI)  &tog SW     &kp PSCRN
+                &key_repeat &vold       &volu       hs(LGUI)    &sl NU      &mo FN      &mo MU &kkp LSHFT SPACE hs(RGUI)  &tog SW     &kp PSCRN
             >; 
         };
 
