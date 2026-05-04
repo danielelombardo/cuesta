@@ -76,7 +76,7 @@
                 &kp ESC     &kp Q       &kp W       &kp E       &kp R       &kp T       &kp Y       &kp U       &kp I       &kp O       &kp P       &kp BSPC    
                 hs(LALT)    &kp TAB     &kp A       &kp S       &kp D       &kp F       &kp G       &kp H       &kp J       &kp K       &kp L       &kp ENTER   
                 &kp DEL     &kp CAPS    hs(LCTRL)   &kp Z       &kp X       &kp C       &kp V       &kp B       &kp N       &kp M       hs(RCTRL)   hs(RALT) 
-                &kp C_MUTE  &vold       &volu       &mo MU      hs(LGUI)    hs(LSHFT)   &mo FN      &lkp NU SPACE hs(RGUI)  &tog SW     &key_repeat &kp PSCRN                 
+                &kp C_MUTE  &vold       &volu       &mo MU      hs(LGUI)    &sl NU      hs(LSHFT)   &lkp FN SPACE hs(RGUI)  &tog SW     &key_repeat &kp PSCRN                 
             >; 
         };
 
@@ -117,7 +117,7 @@
             display-name = "f->";
             bindings = <
             //  1           2           3           4           5           6           7           8           9           10          11          12 
-                ____        xxxx        xxxx        &kp F1      &kp F2      &kp F3      &kp INS     &kp PG_UP   &kp HOME    &kp END     &kp PG_DN   ____ 
+                ____        xxxx        &key_repeat &kp F1      &kp F2      &kp F3      &kp INS     &kp PG_UP   &kp HOME    &kp END     &kp PG_DN   ____ 
                 ____        ____        &kp F10     &kp F4      &kp F5      &kp F6      xxxx        &kp LEFT    &kp DOWN    &kp UP      &kp RIGHT   ____ 
                 ____        ____        ____        &kp F7      &kp F8      &kp F9      xxxx        &kp SPACE   xxxx        xxxx        ____        ____ 
                 ____        ____        ____        ____        ____        ____        ____        ____        ____        &ltg FN     ____        ____ 

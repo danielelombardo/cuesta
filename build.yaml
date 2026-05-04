@@ -19,10 +19,10 @@
 include:
   - board: xiao_ble//zmk
     shield: brut_dongle rgbled_adapter
-  # - board: xiao_ble//zmk
-  #   shield: zukuma_dongle rgbled_adapter
-  # - board: nice_nano//zmk
-  #   shield: foxyduck
+  - board: xiao_ble//zmk
+    shield: zukuma_dongle rgbled_adapter
+  - board: nice_nano//zmk
+    shield: foxyduck
   # - board: xiao_ble//zmk
   #   shield: laut_dongle rgbled_adapter
   # - board: xiao_ble//zmk
