@@ -77,7 +77,7 @@
                 &kp ESC     &kp Q       &kp W       &kp E       &kp R       &kp T       &kp Y       &kp U       &kp I       &kp O       &kp P       &kp BSPC    
                 hs(LALT)    &kp TAB     &kp A       &kp S       &kp D       &kp F       &kp G       &kp H       &kp J       &kp K       &kp L       &kp ENTER   
                 &kp DEL     &kp CAPS    hs(LCTRL)   &kp Z       &kp X       &kp C       &kp V       &kp B       &kp N       &kp M       hs(RCTRL)   hs(RALT) 
-                &vold       &volu       hs(LGUI)    &mo MU      &sl NU      hs(LSHFT)   hs(LSHFT)   &lkp FN SPACE hs(RGUI)  &tog SW     &kp PSCRN
+                &vold       &volu       &mo MU      hs(LGUI)    &sl NU      hs(LSHFT)   hs(LSHFT)   &lkp FN SPACE hs(RGUI)  &tog SW     &kp PSCRN
             >; 
         };
 
@@ -109,8 +109,8 @@
             //  1           2           3           4           5           6           7           8           9           10          11          12 
                 ____        &kp F11     &kp F12     &kp F13     &kp F14     &kp F15     &kp F16     &kp F17     &kp F18     &kp F19     &kp F20     ____ 
                 ____        ____        &aim AIM_TOG &mkp MB2    &mkp MB3    &mkp MB1   xxxx        &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_UP &mmv MOVE_RIGHT ____ 
-                ____        ____        ____        &bapp       &mkp MB4    &mkp MB5    xxxx        &msc SCRL_UP &msc SCRL_DOWN xxxx    ____        ____ 
-                ____        ____        ____        ____        ____        ____        ____        ____        ____        &ltg MU     ____        
+                ____        ____        ____        xxxx        xxxx        &bapp       xxxx        &msc SCRL_UP &msc SCRL_DOWN xxxx    ____        ____ 
+                &mkp MB4    &mkp MB5    ____        ____        ____        ____        ____        ____        ____        &ltg MU     ____        
             >; 
         };
 
