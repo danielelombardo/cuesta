@@ -77,7 +77,7 @@
                 &kp ESC     &kp Q       &kp W       &kp E       &kp R       &kp T       &kp Y       &kp U       &kp I       &kp O       &kp P       &kp BSPC    
                 hs(LALT)    &kp TAB     &kp A       &kp S       &kp D       &kp F       &kp G       &kp H       &kp J       &kp K       &kp L       &kp ENTER   
                 &kp DEL     &kp CAPS    hs(LCTRL)   &kp Z       &kp X       &kp C       &kp V       &kp B       &kp N       &kp M       hs(RCTRL)   hs(RALT) 
-                &vold       &volu       &mo MU      hs(LGUI)    &sl NU      hs(LSHFT)   hs(LSHFT)   &lkp FN SPACE hs(RGUI)  &tog SW     &kp PSCRN
+                &vold       &volu       &mo MU      hs(LGUI)    hs(LSHFT)   &sl NU      &sl NU      &lkp FN SPACE hs(RGUI)  &tog SW     &kp PSCRN
             >; 
         };
 
@@ -99,7 +99,7 @@
                 ____        xxxx        &kp GRAVE   &kp N1      &kp N2      &kp N3      xxxx        &kp SEMI    &kp MINUS   &kp EQUAL   &kp BSLH    ____ 
                 ____        ____        &kp N0      &kp N4      &kp N5      &kp N6      &kp ENTER   &kp COMMA   &kp DOT     &kp SQT     &kp SLASH   ____ 
                 ____        ____        ____        &kp N7      &kp N8      &kp N9      xxxx        &kp LBKT    &kp RBKT    &capwrd     ____        ____ 
-                ____        ____        ____        ____        ____        ____        ____        ____        ____        &ltg NU     ____         
+                ____        ____        ____        ____        ____        &rp SPACE   &rp SPACE   ____        ____        &ltg NU     ____         
             >; 
         };
         
