@@ -77,7 +77,7 @@
                 &kp ESC     &kp Q       &kp W       &kp E       &kp R       &kp T       &kp Y       &kp U       &kp I       &kp O       &kp P       &kp BSPC    
                 &key_repeat &kp TAB     &kp A       &kp S       &kp D       &kp F       &kp G       &kp H       &kp J       &kp K       &kp L       &kp ENTER   
                 hs(LCTRL)   &kp DEL     &kp Z       &kp X       &kp C       &kp V       &kp B       &kp N       &kp M       &sl NU      hs(RCTRL)   &kp PSCRN
-                &mkp MB4    &mkp MB5    &kp CAPS    hs(LALT)    hs(LGUI)    hs(LSHFT)   &lkp FN SPACE  &lkp NU BSPC  &lkp MU ENTER &vold &volu      &kp C_MUTE 
+                &mkp MB4    &mkp MB5    &kp CAPS    hs(LALT)    hs(LGUI)    hs(LSHFT)   &lkp NU SPACE  &lkp FN BSPC  &lkp MU ENTER &vold &volu      &kp C_MUTE 
             >; 
         };
         
