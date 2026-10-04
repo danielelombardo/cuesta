@@ -92,54 +92,54 @@
         compatible = "zmk,keymap";
         abc {
             display-name = "ABC";
-            bindings = <LAYER_FROM40( \
+            bindings = < \
             //  1             2             3             4             5             6             7             8             9             10
                 &kp Q       , &kp W       , &kp E       , &kp R       , &kp T       , &kp Y       , &kp U       , &kp I       , &kp O       , &kp P   ,\
                 &kp TAB     , gl(A)       , al(S)       , cl(D)       , sl(F)       , &kp G       , sr(H)       , cr(J)       , ar(K)       , gr(L)   ,\
                 &kp CAPS    , &kp Z       , &kp X       , &kp C       , &kp V       , &kp B       , &kp N       , &kp M       , &kp COMMA   , &kp DOT ,\
                 LCKS        , &mkp MB4    , &mkp MB5               , &lsm MA LSHFT  , &lkp NA SPACE             , &mo FN      , &vold       , &volu    
-            )>; 
+            >; 
         };
 
         fun {
             display-name = "fn+";
-            bindings = < LAYER_FROM40( \
+            bindings = <  \
                 &kp ESC     , &tog MU     , &kp F7      , &kp F8      , &kp F9      , xxxx      , &kp F17     , &kp F18     , &kp F19     , &aim AIM_OFF ,\
                 ____        , gl(F10)     , al(F4)      , cl(F5)      , sl(F6)      , xxxx      , sr(F14)     , cr(F15)     , ar(F16)     , gr(F20)      ,\
                 ____        , &bapp       , &kp F1      , &kp F2      , &kp F3      , xxxx      , &kp F11     , &kp F12     , &kp F13     , &aim AIM_ON  ,\
                 ____        , ____        , ____                      , ____        , ____                    , ____        , ____        , ____      \
-            )>; 
+            >; 
         };
 
         mou {
             display-name = "mou";
-            bindings = < LAYER_FROM40( \
+            bindings = <  \
             //  1             2             3             4             5           6             7                8                9              10
                 &kp ESC     , &sm LGUI    , &sm LALT    , &sm LCTRL   , &sm LSHFT , xxxx        , &sm RSHFT      , &sm RCTRL      , &sm RALT     , &sm RGUI         ,\
                 ____        , &mkp MB4    , &mkp MB5    , &mkp MB2    , &mkp MB1  , xxxx        , &mmv MOVE_LEFT , &mmv MOVE_DOWN , &mmv MOVE_UP , &mmv MOVE_RIGHT  ,\
                 ____        , xxxx        , xxxx        , xxxx        , &mkp MB3  , xxxx        , &msc SCRL_UP   , &msc SCRL_DOWN , xxxx         , xxxx             ,\
                 ____        , ____        , ____                      , ____      , &tog MU                      , ____           , ____         , ____  \
-            )>; 
+            >; 
         };  
 
         mat {
             display-name = "/12";
-            bindings = < LAYER_FROM40( \
+            bindings = <  \
                 &kp ESC     , &kp GRAVE   , &kp N7      , &kp N8      , &kp N9    , xxxx        , &kp BSLH      , &kp SQT       , &kp MINUS    , &kp RBKT   ,\
                 ____        , gl(N0)      , al(N4)      , cl(N5)      , sl(N6)    , xxxx        , sr(SLASH)     , cr(SEMI)      , ar(EQUAL)    , gr(LBKT)   ,\
                 ____        , &kp DOT     , &kp N1      , &kp N2      , &kp N3    , xxxx        , &kp NUHS      , &kp NUBS      , ____         , ____       ,\
                 ____        , ____        , ____                      , ____      , ____                        , ____          , ____         , ____        \
-            )>; 
+            >; 
         };
 
         nav {
             display-name = "nav";
-            bindings = < LAYER_FROM40( \
+            bindings = < \
                 &kp ESC     , &kp INS     , &capwrd     , &kp PSCRN   , &key_repeat , xxxx     , &kp BSPC    , &kp ENTER   , &kp TAB     , &kp DEL     ,\
                 ____        , &sm LGUI    , &sm LALT    , &sm LCTRL   , &sm LSHFT , xxxx       , &kp LEFT    , &kp DOWN    , &kp UP      , &kp RIGHT   ,\
                 ____        , md(Z)       , md(X)       , md(C)       , md(V)     , xxxx       , &kp HOME    , &kp PG_DN   , &kp PG_UP   , &kp END     ,\
                 ____        , ____        , ____                      , sl(SPACE) , ____                     , ____        , ____        , ____         \
-            )>; 
+            >; 
         };
         
     }; 
