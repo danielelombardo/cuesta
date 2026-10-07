@@ -20,10 +20,12 @@ config ZMK_SPLIT
 config ZMK_POINTING
     default y
 
+endif
+
+
+if SHIELD_CUESTA_LEFT || SHIELD_CUESTA_RIGHT 
+
 config ZMK_SLEEP
     default y
-
-config CONFIG_ZMK_IDLE_SLEEP_TIMEOUT
-    default 600000
 
 endif
