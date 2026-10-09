@@ -108,7 +108,7 @@
                 cl(F10)     al(F4)      gl(F5)      sl(F6)      ____        xxxx        sr(F14)     gr(F15)     ar(F16)     cr(F20)      
                 &bapp       &kp F1      &kp F2      &kp F3      ____        xxxx        &kp F11     &kp F12     &kp F13     &aim AIM_ON  
                 ____        ____        &tog MU                 ____        ____                    ____        ____        ____      
-            >; 
+             >; 
         };
 
         mou {
@@ -125,7 +125,7 @@
             display-name = "/12";
             bindings = <  
                 &kp ESC     &kp N7      &kp N8      &kp N9      &kp GRAVE   xxxx        &kp BSLH    &kp SQT     &kp MINUS   &kp RBKT   
-                gl(N0)      al(N4)      cl(N5)      sl(N6)      ____        xxxx        sr(SLASH)   cr(SEMI)    ar(EQUAL)   gr(LBKT)   
+                cl(N0)      al(N4)      gl(N5)      sl(N6)      ____        xxxx        sr(SLASH)   gr(SEMI)    ar(EQUAL)   cr(LBKT)   
                 &kp DOT     &kp N1      &kp N2      &kp N3      ____        xxxx        &kp NUHS    &kp NUBS    ____        ____       
                 ____        ____        ____                    ____        ____                    ____        ____        ____        
             >; 
@@ -135,7 +135,7 @@
             display-name = "nav";
             bindings = < 
                 &kp ESC     &capwrd     &key_repeat &kp PSCRN   xxxx        &kp INS     &kp BSPC    &kp ENTER   &kp TAB     &kp DEL     
-                &sm LGUI    &sm LALT    &sm LCTRL   &sm LSHFT   ____        xxxx        &kp LEFT    &kp DOWN    &kp UP      &kp RIGHT   
+                &sm LCTRL   &sm LALT    &sm LGUI    &sm LSHFT   ____        xxxx        &kp LEFT    &kp DOWN    &kp UP      &kp RIGHT   
                 md(Z)       md(X)       md(C)       md(V)       ____        xxxx        &kp HOME    &kp PG_DN   &kp PG_UP   &kp END     
                 ____        ____        ____                    sl(SPACE)   ____                    ____        ____        LCKS
             >; 
