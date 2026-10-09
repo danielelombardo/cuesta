@@ -134,7 +134,7 @@
         nav {
             display-name = "nav";
             bindings = < 
-                &kp ESC     &capwrd     &key_repeat &kp Pz SCRN   xxxx        &kp INS     &kp BSPC    &kp ENTER   &kp TAB     &kp DEL     
+                &kp ESC     &capwrd     &key_repeat &kp PSCRN   xxxx        &kp INS     &kp BSPC    &kp ENTER   &kp TAB     &kp DEL     
                 &sm LGUI    &sm LALT    &sm LCTRL   &sm LSHFT   ____        xxxx        &kp LEFT    &kp DOWN    &kp UP      &kp RIGHT   
                 md(Z)       md(X)       md(C)       md(V)       ____        xxxx        &kp HOME    &kp PG_DN   &kp PG_UP   &kp END     
                 ____        ____        ____                    sl(SPACE)   ____                    ____        ____        LCKS
