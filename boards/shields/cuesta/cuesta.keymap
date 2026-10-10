@@ -1,8 +1,8 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 // #include <dt-bindings/zmk/bt.h>
+// #include <behaviors/battery_percentage_printer.dtsi>
 #include <behaviors/anti_idle_mode.dtsi>
-#include <behaviors/battery_percentage_printer.dtsi>
 #include <dt-bindings/anti_idle_mode.h>
 
 &caps_word { continue-list = <MINUS UNDERSCORE BSPC DEL LEFT RIGHT DOT COMMA SEMI SLASH>; };
@@ -96,8 +96,8 @@
             //  1           2           3           4           5           6           7           8           9           10
                 &kp Q       &kp W       &kp E       &kp R       &kp T       &kp Y       &kp U       &kp I       &kp O       &kp P   
                 cl(A)       al(S)       gl(D)       sl(F)       &kp TAB     &kp G       sr(H)       gr(J)       ar(K)       cr(L)   
-                &kp Z       &kp X       &kp C       &kp V       &kp CAPS    &kp B       &kp N       &kp M       &kp COMMA   &kp DOT 
-                &sm LCTRL   &sm LGUI    &capwrd     &lsm MA LSHFT           &lkp NA SPACE           &mo FN      &vold       &volu    
+                &kp Z       &kp X       &kp C       &kp V       &kp ENTER   &kp B       &kp N       &kp M       &kp COMMA   &kp DOT 
+                &sm LCTRL   &sm LGUI    &kp CAPS            &lsm MA LSHFT   &lkp NA SPACE           &mo FN      &vold       &volu    
             >; 
         };
 
@@ -106,8 +106,8 @@
             bindings = <  
                 &kp ESC     &kp F7      &kp F8      &kp F9      xxxx        xxxx        &kp F17     &kp F18     &kp F19     &aim AIM_OFF 
                 cl(F10)     al(F4)      gl(F5)      sl(F6)      ____        xxxx        sr(F14)     gr(F15)     ar(F16)     cr(F20)      
-                &bapp       &kp F1      &kp F2      &kp F3      ____        xxxx        &kp F11     &kp F12     &kp F13     &aim AIM_ON  
-                ____        ____        &tog MU                 ____        ____                    ____        ____        ____      
+                xxxx        &kp F1      &kp F2      &kp F3      ____        xxxx        &kp F11     &kp F12     &kp F13     &aim AIM_ON  
+                ____        ____        ____                    ____        ____                    ____        ____        &tog MU
              >; 
         };
 
@@ -127,7 +127,7 @@
                 &kp ESC     &kp N7      &kp N8      &kp N9      &kp GRAVE   xxxx        &kp BSLH    &kp SQT     &kp MINUS   &kp RBKT   
                 cl(N0)      al(N4)      gl(N5)      sl(N6)      ____        xxxx        sr(SLASH)   gr(SEMI)    ar(EQUAL)   cr(LBKT)   
                 &kp DOT     &kp N1      &kp N2      &kp N3      ____        xxxx        &kp NUHS    &kp NUBS    ____        ____       
-                ____        ____        ____                    ____        ____                    ____        ____        ____        
+                &mkp MB4    &mkp MB5    ____                    ____        ____                    ____        ____        ____        
             >; 
         };
 
@@ -137,7 +137,7 @@
                 &kp ESC     &capwrd     &key_repeat &kp PSCRN   xxxx        &kp INS     &kp BSPC    &kp ENTER   &kp TAB     &kp DEL     
                 &sm LCTRL   &sm LALT    &sm LGUI    &sm LSHFT   ____        xxxx        &kp LEFT    &kp DOWN    &kp UP      &kp RIGHT   
                 md(Z)       md(X)       md(C)       md(V)       ____        xxxx        &kp HOME    &kp PG_DN   &kp PG_UP   &kp END     
-                ____        ____        ____                    sl(SPACE)   ____                    ____        ____        LCKS
+                &mkp MB4    &mkp MB5    ____                    sl(SPACE)   ____                    ____        ____        LCKS
             >; 
         };
         
