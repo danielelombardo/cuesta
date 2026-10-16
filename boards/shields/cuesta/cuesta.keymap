@@ -114,18 +114,18 @@
         mou {
             display-name = "mou";
             bindings = <  
-                &sm LCTRL   &sm LALT    &sm LGUI    &sm LSHFT   &kp BSPC    xxxx        &sm RSHFT   &sm RGUI    &sm RALT    &sm RCTRL      
-                &mkp MB4    &mkp MB5    &mkp MB2    &mkp MB1    &kp TAB     xxxx        &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_UP &mmv MOVE_RIGHT  
-                xxxx        xxxx        xxxx        &mkp MB3    &kp ENTER   xxxx        &msc SCRL_UP &msc SCRL_DOWN xxxx    xxxx             
-                ____        ____        ____                    ____        &tog MU                 ____        ____        ____  
+                &kp ESC     xxxx        xxxx        xxxx        xxxx        xxxx        xxxx        xxxx        xxxx        xxxx 
+                xxxx        &mkp MB3    &mkp MB2    &mkp MB1    xxxx        xxxx        &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_UP &mmv MOVE_RIGHT  
+                xxxx        xxxx        xxxx        xxxx        xxxx        xxxx        &msc SCRL_UP &msc SCRL_DOWN xxxx    xxxx             
+                ____        ____        ____                    ____        ____                    ____        ____        &tog MU 
             >; 
         };  
 
         mat {
             display-name = "/12";
             bindings = <  
-                &kp ESC     &kp N7      &kp N8      &kp N9      &kp GRAVE   xxxx        &kp BSLH    &kp SQT     &kp MINUS   &kp RBKT   
-                cl(N0)      al(N4)      gl(N5)      sl(N6)      &kp TAB     xxxx        sr(SLASH)   gr(SEMI)    ar(EQUAL)   cr(LBKT)   
+                &kp ESC     &kp N7      &kp N8      &kp N9      &kp BSPC    xxxx        &kp BSLH    &kp SQT     &kp MINUS   &kp RBKT   
+                cl(N0)      al(N4)      gl(N5)      sl(N6)      &kp TAB     &kp GRAVE   sr(SLASH)   gr(SEMI)    ar(EQUAL)   cr(LBKT)   
                 &kp DOT     &kp N1      &kp N2      &kp N3      &kp ENTER   xxxx        &kp NUHS    &kp NUBS    ____        ____       
                 &mkp MB4    &mkp MB5    ____                    ____        ____                    ____        ____        ____        
             >; 
