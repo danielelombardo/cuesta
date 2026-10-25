@@ -70,9 +70,9 @@
 
         /omit-if-no-ref/ kkp: holdkp_kp      { compatible = "zmk,behavior-hold-tap";   #binding-cells = <2>; flavor = "balanced";        tapping-term-ms = <300>; bindings = <&kp>, <&kp>; }; 
         /omit-if-no-ref/ hml: homerowleft    { compatible = "zmk,behavior-hold-tap";   #binding-cells = <2>; flavor = "balanced";        tapping-term-ms = <280>; 
-                                               quick-tap-ms = <175>; require-prior-idle-ms = <170>; bindings = <&kp>, <&kp>; hold-trigger-key-positions = <KEYS_R THUMBS>; hold-trigger-on-release; };
+                                               quick-tap-ms = <175>; require-prior-idle-ms = <180>; bindings = <&kp>, <&kp>; hold-trigger-key-positions = <KEYS_R THUMBS>; hold-trigger-on-release; };
         /omit-if-no-ref/ hmr: homerowright   { compatible = "zmk,behavior-hold-tap";   #binding-cells = <2>; flavor = "balanced";        tapping-term-ms = <280>; 
-                                               quick-tap-ms = <175>; require-prior-idle-ms = <170>; bindings = <&kp>, <&kp>; hold-trigger-key-positions = <KEYS_L THUMBS>; hold-trigger-on-release; };
+                                               quick-tap-ms = <175>; require-prior-idle-ms = <180>; bindings = <&kp>, <&kp>; hold-trigger-key-positions = <KEYS_L THUMBS>; hold-trigger-on-release; };
 
         /omit-if-no-ref/ vold: volum_dw_mute { compatible = "zmk,behavior-mod-morph";  #binding-cells = <0>; bindings = <&kp C_VOL_DN>, <&kp C_MUTE>; mods = <(MOD_LGUI|MOD_RGUI)>; };
         /omit-if-no-ref/ volu: volum_up_mute { compatible = "zmk,behavior-mod-morph";  #binding-cells = <0>; bindings = <&kp C_VOL_UP>, <&kp C_MUTE>; mods = <(MOD_LGUI|MOD_RGUI)>; };
@@ -95,8 +95,8 @@
             bindings = < 
             //  1           2           3           4           5           6           7           8           9           10
                 &kp Q       &kp W       &kp E       &kp R       &kp BSPC    &kp Y       &kp U       &kp I       &kp O       &kp P   
-                cl(A)       al(S)       gl(D)       sl(F)       &kp T       &kp G       sr(H)       gr(J)       ar(K)       cr(L)   
-                &kp Z       &kp X       &kp C       &kp V       &kp ENTER   &kp B       &kp N       &kp M       &kp COMMA   &kp DOT 
+                &kp A       &kp S       &kp D       &kp F       &kp T       &kp G       &kp H       &kp J       &kp K       &kp L   
+                cl(Z)       al(X)       gl(C)       sl(V)       &kp ENTER   &kp B       sr(N)       gr(&kp M)   ar(&kp COMMA) cr(DOT) 
                 &sm LCTRL   &sm LGUI    &kp CAPS            &lsm MA LSHFT   &lkp NA SPACE           &mo FN      &vold       &volu    
             >; 
         };
@@ -104,9 +104,9 @@
         fun {
             display-name = "fn+";
             bindings = <  
-                &kp ESC     &kp F7      &kp F8      &kp F9      &kp BSPC    xxxx        &kp F17     &kp F18     &kp F19     &aim AIM_OFF 
-                cl(F10)     al(F4)      gl(F5)      sl(F6)      &kp TAB     xxxx        sr(F14)     gr(F15)     ar(F16)     cr(F20)      
-                xxxx        &kp F1      &kp F2      &kp F3      &kp ENTER   xxxx        &kp F11     &kp F12     &kp F13     &aim AIM_ON  
+                &kp ESC     &kp F7      &kp F8      &kp F9      &kp BSPC    &aim AIM_ON &kp F17     &kp F18     &kp F19     &aim AIM_OFF 
+                &kp F10     &kp F4      &kp F5      &kp F6      &kp TAB     xxxx        &kp F14     &kp F15     &kp F16     &kp F20
+                cl(K_CANCEL) al(F1)     gl(F2)      sl(F3)      &kp ENTER   xxxx        sr(F11)     gr(&kp F12) ar(&kp F13) cr(K_CANCEL) 
                 ____        ____        ____                    ____        ____                    ____        ____        &tog MU
              >; 
         };
@@ -125,8 +125,8 @@
             display-name = "/12";
             bindings = <  
                 &kp ESC     &kp N7      &kp N8      &kp N9      &kp BSPC    xxxx        &kp BSLH    &kp SQT     &kp MINUS   &kp RBKT   
-                cl(N0)      al(N4)      gl(N5)      sl(N6)      &kp TAB     &kp GRAVE   sr(SLASH)   gr(SEMI)    ar(EQUAL)   cr(LBKT)   
-                &kp DOT     &kp N1      &kp N2      &kp N3      &kp ENTER   xxxx        &kp NUHS    &kp NUBS    ____        ____       
+                &kp N0      &kp N4      &kp N5      &kp N6      &kp TAB     &kp GRAVE   &kp SLASH   &kp SEMI    &kp EQUAL   &kp LBKT
+                cl(DOT)     al(N1)      gl(N2)      sl(N3)      &kp ENTER   xxxx        sr(NUHS)    gr(NUBS)    ____        ____       
                 &mkp MB4    &mkp MB5    ____                    ____        ____                    ____        ____        ____        
             >; 
         };
@@ -135,8 +135,8 @@
             display-name = "nav";
             bindings = < 
                 &kp ESC     &capwrd     &key_repeat &kp PSCRN   &kp BSPC    &kp INS     &kp BSPC    &kp ENTER   &kp TAB     &kp DEL     
-                &sm LCTRL   &sm LALT    &sm LGUI    &sm LSHFT   &kp TAB     xxxx        &kp LEFT    &kp DOWN    &kp UP      &kp RIGHT   
-                md(Z)       md(X)       md(C)       md(V)       &kp ENTER   xxxx        &kp HOME    &kp PG_DN   &kp PG_UP   &kp END     
+                md(Z)       md(X)       md(C)       md(V)       &kp TAB     xxxx        &kp LEFT    &kp DOWN    &kp UP      &kp RIGHT   
+                &sm LCTRL   &sm LALT    &sm LGUI    &sm LSHFT   &kp ENTER   xxxx        &kp HOME    &kp PG_DN   &kp PG_UP   &kp END     
                 &mkp MB4    &mkp MB5    ____                    sl(SPACE)   ____                    ____        ____        LCKS
             >; 
         };
