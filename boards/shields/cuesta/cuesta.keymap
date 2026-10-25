@@ -96,7 +96,7 @@
             //  1           2           3           4           5           6           7           8           9           10
                 &kp Q       &kp W       &kp E       &kp R       &kp BSPC    &kp Y       &kp U       &kp I       &kp O       &kp P   
                 &kp A       &kp S       &kp D       &kp F       &kp T       &kp G       &kp H       &kp J       &kp K       &kp L   
-                cl(Z)       al(X)       gl(C)       sl(V)       &kp ENTER   &kp B       sr(N)       gr(&kp M)   ar(&kp COMMA) cr(DOT) 
+                cl(Z)       al(X)       gl(C)       sl(V)       &kp ENTER   &kp B       sr(N)       gr(M)       ar(COMMA)   cr(DOT) 
                 &sm LCTRL   &sm LGUI    &kp CAPS            &lsm MA LSHFT   &lkp NA SPACE           &mo FN      &vold       &volu    
             >; 
         };
