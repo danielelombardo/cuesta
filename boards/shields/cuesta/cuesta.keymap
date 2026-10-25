@@ -106,7 +106,7 @@
             bindings = <  
                 &kp ESC     &kp F7      &kp F8      &kp F9      &kp BSPC    &aim AIM_ON &kp F17     &kp F18     &kp F19     &aim AIM_OFF 
                 &kp F10     &kp F4      &kp F5      &kp F6      &kp TAB     xxxx        &kp F14     &kp F15     &kp F16     &kp F20
-                cl(K_CANCEL) al(F1)     gl(F2)      sl(F3)      &kp ENTER   xxxx        sr(F11)     gr(&kp F12) ar(&kp F13) cr(K_CANCEL) 
+                cl(K_CANCEL) al(F1)     gl(F2)      sl(F3)      &kp ENTER   xxxx        sr(F11)     gr(F12)     ar(F13)     cr(K_CANCEL) 
                 ____        ____        ____                    ____        ____                    ____        ____        &tog MU
              >; 
         };
